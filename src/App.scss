@@ -1,0 +1,29 @@
+
+$navy-blue: #000080;
+
+@font-face {
+  font-family: "Montserrat";
+  src: url(./assets/Montserrat-VariableFont_wght.ttf);
+}
+#root {
+  height: 100%;
+  width: 100%;
+  font-family: "Montserrat";
+}
+
+.greetingBox {
+  color: white ;
+  font-size: 17px;
+  margin-top: 15%;
+  letter-spacing: 1px;
+  line-height: 26px;
+  padding-left: 10px;
+}
+
+.greetingBox h1 {
+  height: 100%;
+  width: 100%;
+  font-size: 75px;
+  line-height: 160px;
+  font-weight: 700;
+}
