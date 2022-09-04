@@ -5,29 +5,20 @@ $scndryClr: #08fdd8;
 .greetingBox {
     color: #fff ;
     font-size: 17px;
-    margin-top: 15%;
+    // padding-top: 15%;
+    margin: auto;
     letter-spacing: 1px;
     line-height: 26px;
     padding-left: 10px;
   }
   
   .greetingBox h1 {
-    height: 100%;
-    width: 100%;
     font-size: 75px;
     line-height: 160px;
     font-weight: 700;
   }
   
-  .greetingBtn{
-    margin-top: 30px;
-    display: inline-block;
-    border-radius: 6px;
-    border: 2px solid $scndryClr;
-    padding: 10px 30px;
-    margin-left: 30px;
-    
-  }
+  
 
 
 

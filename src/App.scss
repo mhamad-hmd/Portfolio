@@ -24,9 +24,10 @@ $scndryClr: #08fdd8;
 .btnA {
   background: linear-gradient(45deg, $pageClr 50%, $scndryClr 50%);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: #fff;
+  -webkit-text-fill-color: $pageClr;
   position: relative;
   font-weight: 600;
+  transition: 0.7s;
 }
 
 .btnA::after {
@@ -44,12 +45,14 @@ $scndryClr: #08fdd8;
 .btnA:after {
   background-size: 400px;
   background-position: 0;
-  transition: 1s;
+  transition: 0.7s;
 }
 
 .btnA:hover,
 .btnA:hover:after {
   background-position: 99%;
+  -webkit-text-fill-color: #fff;
+  
 }
 
 .btnB {
@@ -58,6 +61,7 @@ $scndryClr: #08fdd8;
   -webkit-text-fill-color: #fff;
   position: relative;
   font-weight: 600;
+  
 }
 
 .btnB:after {
@@ -75,11 +79,23 @@ $scndryClr: #08fdd8;
 .btnB:after {
   background-size: 400px;
   background-position: 99%;
-  transition: 1s;
+  transition: 0.7s ;
 }
 
 
 .btnB:hover,.btnB:hover:after{
   background-position: 0;
+  -webkit-text-fill-color: $pageClr;
+  
+  
 }
+
+.sectionTitle{
+  font-size: 60px;
+  text-align: center;
+  color: $scndryClr;
+  font-weight: 600;
+
+}
+
 

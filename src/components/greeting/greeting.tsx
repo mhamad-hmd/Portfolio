@@ -1,6 +1,7 @@
 import React from 'react';
 import Typed from 'typed.js';
 import './greeting.scss'
+import '../../app.scss'
 
 
 
@@ -13,7 +14,7 @@ export const Greeting = () => {
   React.useEffect(() => {
     const options = {
       strings: ['Mohamad Hammoud', 'A Web Developer'],
-      typeSpeed: 50,
+      typeSpeed: 100,
       backSpeed: 50,
 
     };
@@ -29,16 +30,18 @@ export const Greeting = () => {
   }, [])
 
   return (
-    <div className="greetingBox text-center" >
-
-      <h1>I'm <span className='autoType' ref={el}></span></h1>
-      <p>Feel free to reach out if you need help in making a website for you</p>
+    <div className="greetingBox flex items-center justify-center text-center h-screen" >
       <div>
 
-        <button className='btn btnB'>My Work</button>
-        <button className='btn btnA'>About Me</button>
-        <button className='btn btnB'>Contact Me</button>
+        <h1>I'm <span className='autoType' ref={el}></span></h1>
+        <p>Feel free to reach out if you need help in making a website for you</p>
+        <div>
 
+          <button className='btn btnB'>My Work</button>
+          <button className='btn btnA'>About Me</button>
+          <button className='btn btnB'>Contact Me</button>
+
+        </div>
       </div>
 
     </div>
