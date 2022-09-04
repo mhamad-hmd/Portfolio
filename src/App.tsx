@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.scss'
 import { Greeting } from './components/greeting/greeting'
+import {DisplayProjects} from './components/DisplayProjects/displayProjects'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -8,9 +9,9 @@ function App() {
   return (
     <div className="App">
 
-      
+        
         {Greeting()}
-      
+        {DisplayProjects()}
      
     </div>
   )

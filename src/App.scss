@@ -1,5 +1,6 @@
 
-$navy-blue: #000080;
+$pageClr: #515152;
+$scndryClr: #08fdd8;
 
 @font-face {
   font-family: "Montserrat";
@@ -11,19 +12,74 @@ $navy-blue: #000080;
   font-family: "Montserrat";
 }
 
-.greetingBox {
-  color: white ;
-  font-size: 17px;
-  margin-top: 15%;
-  letter-spacing: 1px;
-  line-height: 26px;
-  padding-left: 10px;
+.btn {
+  margin-top: 30px;
+  display: inline-block;
+  border-radius: 6px;
+  border: 2px solid $scndryClr;
+  padding: 10px 30px;
+  margin-left: 30px;
 }
 
-.greetingBox h1 {
-  height: 100%;
-  width: 100%;
-  font-size: 75px;
-  line-height: 160px;
-  font-weight: 700;
+.btnA {
+  background: linear-gradient(45deg, $pageClr 50%, $scndryClr 50%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #fff;
+  position: relative;
+  font-weight: 600;
 }
+
+.btnA::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(45deg, $scndryClr 50%, $pageClr 50%);
+  z-index: -1;
+}
+
+.btnA,
+.btnA:after {
+  background-size: 400px;
+  background-position: 0;
+  transition: 1s;
+}
+
+.btnA:hover,
+.btnA:hover:after {
+  background-position: 99%;
+}
+
+.btnB {
+  background: linear-gradient(45deg, $scndryClr 50%, $pageClr 50%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #fff;
+  position: relative;
+  font-weight: 600;
+}
+
+.btnB:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(45deg, $scndryClr 50%, $pageClr 50%);
+  z-index: -1;
+}
+
+.btnB,
+.btnB:after {
+  background-size: 400px;
+  background-position: 99%;
+  transition: 1s;
+}
+
+
+.btnB:hover,.btnB:hover:after{
+  background-position: 0;
+}
+
