@@ -1,0 +1,27 @@
+
+$pageClr: #515152;
+$scndryClr: #08fdd8;
+
+.formInput{
+    border: 2px solid $scndryClr;
+    color: $scndryClr;
+    -webkit-text-fill-color: $scndryClr;
+    
+    max-width: 600px;
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-left: 5px;
+    outline:none;
+    background: transparent;
+}
+
+.miniInput{
+    max-width: 300px;    
+}
+
+.aboutInput{
+    height: 100px;
+}
+
+

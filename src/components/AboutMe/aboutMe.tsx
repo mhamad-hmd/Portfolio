@@ -3,7 +3,6 @@ import './aboutMe.scss'
 
 export const AboutMe = () => {
 
-    console.log('about me')
 
     return (
 
