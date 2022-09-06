@@ -21,9 +21,9 @@ function App() {
         <ParticlesBackground />
         <Routes>
 
-          <Route  path="/" element = {<><Greeting /><DisplayProjects /><AboutMe /><ContactMe /> <SocialMedia/> </>} />
+          <Route  path="https://mhamad-hmd.github.io/Portfolio/" element = {<><Greeting /><DisplayProjects /><AboutMe /><ContactMe /> <SocialMedia/> </>} />
 
-          <Route path="/success" element ={<SuccessPage/>} />
+          <Route path="https://mhamad-hmd.github.io/Portfolio/success" element ={<SuccessPage/>} />
           
 
         </Routes>

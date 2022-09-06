@@ -5,7 +5,7 @@ import { Container } from "react-dom";
 
 export const ParticlesBackground = () => {
 
-  const particlesInit = useCallback(async (engine: Engine) => {
+  const particlesInit = useCallback(async (engine: any) => {
 
     // you can initialize the tsParticles instance (engine) here, adding custom shapes or presets
     // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
@@ -13,7 +13,7 @@ export const ParticlesBackground = () => {
     await loadFull(engine);
   }, []);
 
-  const particlesLoaded = useCallback(async (container: Container | undefined) => {
+  const particlesLoaded = useCallback(async (container: Container | any) => {
     
   }, []);
 
@@ -65,7 +65,7 @@ export const ParticlesBackground = () => {
           enable: true,
         },
         move: {
-          directions: "none",
+          direction: "none",
           enable: true,
           outModes: {
             default: "bounce",
