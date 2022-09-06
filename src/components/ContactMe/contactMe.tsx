@@ -3,10 +3,9 @@ import './contactMe.scss';
 
 
 export const ContactMe = () => {
-    console.log('Contact Me')
 
     return (
-        <div className='contactWrapper'>
+        <div className='contactWrapper section'>
 
             <div>
                 <h1 className='sectionTitle'>Contact ME</h1>
@@ -24,11 +23,11 @@ export const ContactMe = () => {
                     {/* check if successfull */}
                     <input type="hidden" name="_next" value="http://127.0.0.1:5173/success"></input>
 
-                    <div className='flex justify-between '>
+                    <div className='flex flex-wrap justify-between '>
                         <input className='formInput miniInput md:m-0 sm:mx-1.5' type="text" name='Name' placeholder='Name' />
                         <input className='formInput miniInput md:m-0 sm:mx-1.5' type="text" name="Last&nbsp;Name" placeholder='LastName' />
                     </div>
-                    <div className='flex justify-evenly'>
+                    <div className='flex flex-wrap xs:justify-between md:justify-evenly'>
                         <input className='formInput miniInput' name='Email' type="Email" placeholder='Email ' />
                         <input className=' formInput miniInput' type="text" name='Phone' placeholder='PhoneNumber' />
                     </div>

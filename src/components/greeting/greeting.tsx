@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import Typed from 'typed.js';
 import './greeting.scss'
 import '../../app.scss'
@@ -6,6 +6,14 @@ import '../../app.scss'
 
 
 export const Greeting = () => {
+
+  const myRef = useRef<null | HTMLDivElement>(null)
+
+  const executeScroll = () => myRef.current!.scrollIntoView()    
+  // run this function from an event handler or an effect to execute scroll 
+
+
+
   // Create reference to store the DOM element containing the animation
   const el: any = React.useRef(null);
   // Create reference to store the Typed instance itself
@@ -30,16 +38,25 @@ export const Greeting = () => {
   }, [])
 
   return (
-    <div className="greetingBox flex items-center justify-center text-center h-screen" >
+    <div className="greetingBox flex items-center justify-center h-screen text-center ">
       <div>
 
-         <h1 className='md:text-7xl sm:text-5xl xs:text-4xl' ><span className='autoType ' ref={el}></span></h1>
+        <h1 className='md:text-7xl sm:text-5xl xs:text-4xl'><span className='autoType ' ref={el}></span></h1>
         <p className='md:text-base xs:text-sm'>Feel free to reach out if you need help in making a website for you</p>
-        <div>
 
-          <button className='btn btnB'>My Work</button>
-          <button className='btn btnA'>About Me</button>
-          <button className='btn btnB'>Contact Me</button>
+        <div className='flex justify-center flex-wrap'>
+          <div className='btnDiv'>
+            <button id='myWork' className='btn btnB' onClick={executeScroll} >My Work</button>
+          </div>
+
+          <div className='btnDiv'>
+            <button id='aboutMe' className='btn btnA'>About Me</button>
+          </div>
+
+          <div className='btnDiv'>
+            <button id='contactMe' className='btn btnB'>Contact Me</button>
+          </div>
+
 
         </div>
       </div>
@@ -47,4 +64,3 @@ export const Greeting = () => {
     </div>
   )
 }
-

@@ -6,7 +6,7 @@ export const AboutMe = () => {
 
     return (
 
-        <div className="aboutMeWrapper py-60">
+        <div className="aboutMeWrapper section">
             <div className="aboutMe ">
 
                 <div>

@@ -16,12 +16,28 @@ $scndryClr: #08fdd8;
     background: transparent;
 }
 
-.miniInput{
-    max-width: 300px;    
-}
+
 
 .aboutInput{
     height: 100px;
+
 }
+
+
+@media (min-width:768px)  {
+    .miniInput{
+        max-width: 300px;  
+          
+    }
+}
+
+@media (min-width: 320px ) and (max-width:767px ) {
+    .miniInput{
+        max-width: 800px;
+    }
+}
+
+
+
 
 

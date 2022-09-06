@@ -21,9 +21,9 @@ export const ProjectConstructor = (props: props) => {
 
 
     return (
-        <div className='projectWrapper  m-auto my-4 '>
-            <div className='projectInfo flex justify-between '>
-                <div className='mx-12'>
+        <div className='projectWrapper  m-auto py-6 '>
+            <div className='projectInfo flex  justify-between '>
+                <div className=''>
                     <div className='mb-2 '>
 
                         <h1 className='projectTitle'>{title}</h1>
@@ -35,18 +35,19 @@ export const ProjectConstructor = (props: props) => {
 
 
                     </div>
+                    
                     <div className='py-2'>
                         <h1>Tools Used:</h1>
                         <p>{tools}</p>
                     </div>
-                    <div>
+                    <div className='aboutIt'>
                         <h1>About It:</h1>
                         <p>{aboutIt}</p>
 
                     </div>
                 </div>
 
-                <div className='previewContainer'>
+                <div className='previewContainer py-5'>
 
                     <img className='previewImg' src={imgPath} alt="" />
 

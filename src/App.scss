@@ -1,24 +1,9 @@
-
 $pageClr: #515152;
 $scndryClr: #08fdd8;
 
 @font-face {
   font-family: "Montserrat";
   src: url(./assets/Montserrat-VariableFont_wght.ttf);
-}
-#root {
-  height: 100%;
-  width: 100%;
-  font-family: "Montserrat";
-}
-
-.btn {
-  margin-top: 30px;
-  display: inline-block;
-  border-radius: 6px;
-  border: 2px solid $scndryClr;
-  padding: 10px 30px;
-  margin-left: 30px;
 }
 
 .btnA {
@@ -52,7 +37,6 @@ $scndryClr: #08fdd8;
 .btnA:hover:after {
   background-position: 99%;
   -webkit-text-fill-color: #fff;
-  
 }
 
 .btnB {
@@ -61,7 +45,6 @@ $scndryClr: #08fdd8;
   -webkit-text-fill-color: #fff;
   position: relative;
   font-weight: 600;
-  
 }
 
 .btnB:after {
@@ -79,23 +62,49 @@ $scndryClr: #08fdd8;
 .btnB:after {
   background-size: 400px;
   background-position: 99%;
-  transition: 0.7s ;
+  transition: 0.7s;
 }
 
-
-.btnB:hover,.btnB:hover:after{
+.btnB:hover,
+.btnB:hover:after {
   background-position: 0;
   -webkit-text-fill-color: $pageClr;
-  
-  
 }
 
-.sectionTitle{
-  font-size: 60px;
+.sectionTitle {
   text-align: center;
   color: $scndryClr;
   font-weight: 600;
-
 }
 
+.section {
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+}
 
+@media (min-width: 768px) {
+  .sectionTitle {
+    font-size: 60px;
+  }
+  .btn {
+    display: inline-block;
+    border-radius: 6px;
+    border: 2px solid $scndryClr;
+    padding: 10px 30px;
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .sectionTitle {
+    font-size: 40px;
+  }
+
+  .btn {
+    display: inline-block;
+    border-radius: 6px;
+    border: 2px solid $scndryClr;
+    padding: 5px 20px;
+    font-size: 15px;
+  }
+}
