@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import Typed from 'typed.js';
 import './greeting.scss'
-import '../../app.scss'
+
 
 
 
