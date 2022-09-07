@@ -38,7 +38,7 @@ export const Greeting = () => {
       <div>
 
         <h1 className='md:text-7xl sm:text-5xl xs:text-4xl'><span className='autoType ' ref={el}></span></h1>
-        <p className='md:text-base xs:text-sm'>Feel free to reach out if you need help in making a website for you</p>
+        <p className='md:text-base xs:text-sm'>Feel free to reach out if you need help in making a website for you or your business</p>
 
         <div className='flex justify-center flex-wrap'>
           <div className='btnDiv'>

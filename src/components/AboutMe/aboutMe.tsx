@@ -31,7 +31,7 @@ export const AboutMe = () => {
 
                     <div className="myInfo max-w-6xl">
                         <p className="break-words">Born in 2002,
-                            started learning web developing by taking a full stack course on Udemy,
+                            started learning web developing by taking a full stack <a className='hyperText' href="https://www.udemy.com/course/the-complete-web-developer-zero-to-mastery/">course</a>   on Udemy,
                             always trying to grow my knowledge as much as possible and to stay up to date with the industry.
                             I'm very good in working with teams, love to ask alot of questions to wrap my head around the code as much as possible,
                             and probably one of the most dedicated and desciplened guy youll meet  </p>
