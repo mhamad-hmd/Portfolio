@@ -7,11 +7,7 @@ import '../../app.scss'
 
 export const Greeting = () => {
 
-  const myRef = useRef<null | HTMLDivElement>(null)
-
-  const executeScroll = () => myRef.current!.scrollIntoView()    
-  // run this function from an event handler or an effect to execute scroll 
-
+  
 
 
   // Create reference to store the DOM element containing the animation
@@ -46,7 +42,7 @@ export const Greeting = () => {
 
         <div className='flex justify-center flex-wrap'>
           <div className='btnDiv'>
-            <button id='myWork' className='btn btnB' onClick={executeScroll} >My Work</button>
+            <button id='myWork' className='btn btnB'  >My Work</button>
           </div>
 
           <div className='btnDiv'>

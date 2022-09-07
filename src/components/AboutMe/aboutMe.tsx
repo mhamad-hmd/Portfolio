@@ -1,21 +1,35 @@
 
+import { useEffect, useRef } from 'react';
+import { scrollIntoView } from '../scrollIntoView/scrollIntoview';
 import './aboutMe.scss'
 
 export const AboutMe = () => {
 
+    
+    const myRef = useRef<null | HTMLDivElement>(null)
+
+    const handleClick = () => {
+        myRef.current?.scrollIntoView({behavior: 'smooth'});
+      };    
+    
+      const aboutMeBtn = 'aboutMe'
+
+      scrollIntoView(aboutMeBtn, handleClick)
+    
+    
 
     return (
 
-        <div className="aboutMeWrapper section">
+        <div className="aboutMeWrapper  section">
             <div className="aboutMe ">
 
-                <div>
+                <div ref={myRef}>
                     <h1 className="sectionTitle">About me</h1>
                 </div>
 
-                <div className="myInfoWrapper grid justify-center items-center">
+                <div  className="myInfoWrapper grid justify-center items-center">
 
-                    <div className="myInfo">
+                    <div className="myInfo max-w-6xl">
                         <p className="break-words">Born in 2002,
                             started learning web developing by taking a full stack course on Udemy,
                             always trying to grow my knowledge as much as possible and to stay up to date with the industry.

@@ -4,7 +4,7 @@ import { DisplayProjects } from './components/DisplayProjects/displayProjects'
 import { AboutMe } from './components/AboutMe/aboutMe'
 import { ParticlesBackground } from './components/Tsparticles/tsParticles'
 import { ContactMe } from './components/ContactMe/contactMe'
-import { BrowserRouter as Router, HashRouter, Route, Routes } from "react-router-dom";
+import { Router, HashRouter, Route, Routes } from "react-router-dom";
 import { SuccessPage } from './components/successPage/successPage'
 import { SocialMedia } from './components/socialMedia/socialMedia'
 import { useRef } from 'react'
@@ -16,7 +16,7 @@ function App() {
 
 
   return (
-    <HashRouter>
+    
       <div className="App">
         <ParticlesBackground />
         <Routes>
@@ -28,7 +28,6 @@ function App() {
 
         </Routes>
       </div>
-    </HashRouter>
 
   )
 }

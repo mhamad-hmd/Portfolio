@@ -8,7 +8,7 @@ $scndryClr: #08fdd8;
 
 .btnA {
   background: linear-gradient(45deg, $pageClr 50%, $scndryClr 50%);
-  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: $pageClr;
   position: relative;
   font-weight: 600;
@@ -41,7 +41,7 @@ $scndryClr: #08fdd8;
 
 .btnB {
   background: linear-gradient(45deg, $scndryClr 50%, $pageClr 50%);
-  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: #fff;
   position: relative;
   font-weight: 600;

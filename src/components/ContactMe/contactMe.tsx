@@ -1,18 +1,30 @@
 
+import { useRef } from 'react';
+import { scrollIntoView } from '../scrollIntoView/scrollIntoview';
 import './contactMe.scss';
 
 
 export const ContactMe = () => {
 
+    const myRef = useRef<null | HTMLDivElement>(null)
+
+    const handleClick = () => {
+        myRef.current?.scrollIntoView({behavior: 'smooth'});
+      };    
+    
+      const contactMeBtn = 'contactMe'
+
+      scrollIntoView(contactMeBtn, handleClick)
+
     return (
         <div className='contactWrapper section'>
 
             <div>
-                <h1 className='sectionTitle'>Contact ME</h1>
+                <h1 ref={myRef} className='sectionTitle'>Contact ME</h1>
             </div>
 
             <div>
-                <form action="https://formsubmit.co/ce508cfc734643d8a6f4809a254afebc" method="POST" className='grid '>
+                <form action="https://formsubmit.co/ce508cfc734643d8a6f4809a254afebc" method="POST" className='grid max-w-6xl m-auto '>
                    
                    {/* Honeypot */}
                    <input className='hidden' type="text" name='_honey'  />

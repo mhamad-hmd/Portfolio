@@ -21,7 +21,7 @@ export const ProjectConstructor = (props: props) => {
 
 
     return (
-        <div className='projectWrapper  m-auto py-6 '>
+        <div className='projectWrapper  m-auto py-6  '>
             <div className='projectInfo flex  justify-between '>
                 <div className=''>
                     <div className='mb-2 '>
