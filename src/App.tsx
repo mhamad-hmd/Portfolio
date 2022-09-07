@@ -4,7 +4,7 @@ import { DisplayProjects } from './components/DisplayProjects/displayProjects'
 import { AboutMe } from './components/AboutMe/aboutMe'
 import { ParticlesBackground } from './components/Tsparticles/tsParticles'
 import { ContactMe } from './components/ContactMe/contactMe'
-import {HashRouter,  Router,Routes, Route,  } from 'react-router-dom';
+import {BrowserRouter as Router, Routes, Route  } from "react-router-dom";
 import { SuccessPage } from './components/successPage/successPage';
 import { SocialMedia } from './components/socialMedia/socialMedia'
 import { useRef } from 'react'
@@ -12,26 +12,26 @@ import { useRef } from 'react'
 
 function App() {
 
- 
+
 
 
   return (
-      <div className="App">
-        
+    <Router>
+    <div className="App">
+     
         <ParticlesBackground />
-        
-        <HashRouter >
-          <Routes>
 
-          <Route path="/" element = {<><Greeting /><DisplayProjects /><AboutMe /><ContactMe /> <SocialMedia/> </>} />
+        <Routes>
 
-          <Route path="/success" element ={<SuccessPage/>} />
-          </Routes> 
+          <Route path="/Portfolio/" element={<><Greeting /><DisplayProjects /><AboutMe /><ContactMe /> <SocialMedia /> </>} />
+          <Route path="/Portfolio/success" element={<SuccessPage />} />
 
-        </HashRouter>
 
-        
-      </div>
+        </Routes>
+      
+
+    </div>
+    </Router>
   )
 }
 
