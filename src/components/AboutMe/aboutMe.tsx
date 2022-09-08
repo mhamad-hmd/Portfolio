@@ -25,11 +25,11 @@ export const AboutMe = () => {
         <div ref={displayRef}  className="aboutMeWrapper  section">
             <div className={` ${myElementIsVisible? 'viewAboutMe' : 'offAboutMe'} aboutMe px-4`} >
 
-                <div ref={myRef}>
-                    <h1 className="sectionTitle">About me</h1>
+                <div >
+                    <h1  className="sectionTitle">About me</h1>
                 </div>
 
-                <div  className="myInfoWrapper grid justify-center items-center">
+                <div   className="myInfoWrapper grid justify-center items-center">
 
                     <div className="myInfo max-w-6xl">
                         <p className="break-words">Born in 2002,
@@ -39,7 +39,7 @@ export const AboutMe = () => {
                             and probably one of the most dedicated and disciplined guy you'll meet  </p>
                     </div>
 
-                    <div className='py-4'>
+                    <div ref={myRef} className='py-4'>
 
                         <h1 className='skillTitle'>Skills :</h1>
 
