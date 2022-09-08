@@ -24,7 +24,7 @@ export const ParticlesBackground = () => {
     options={{
       background: {
         color: {
-          value: "#515152 ",
+          value: "000000 ",
         },
       },
       fpsLimit: 60,
@@ -46,7 +46,7 @@ export const ParticlesBackground = () => {
           },
           repulse: {
             distance: 200,
-            duration: 0.2,
+            duration: 0.1,
           },
         },
       },
@@ -56,7 +56,7 @@ export const ParticlesBackground = () => {
         },
         links: {
           color: "#08fdd8",
-          distance: 150,
+          distance: 130,
           enable: true,
           opacity: 0.5,
           width: 1,
@@ -71,15 +71,15 @@ export const ParticlesBackground = () => {
             default: "bounce",
           },
           random: false,
-          speed: 4,
+          speed: 2,
           straight: false,
         },
         number: {
           density: {
             enable: true,
-            area: 800,
+            area: 900,
           },
-          value: 80,
+          value: 60,
         },
         opacity: {
           value: 0.5,
