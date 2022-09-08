@@ -2,6 +2,11 @@
 $pageClr: #515152;
 $scndryClr: #08fdd8;
 
+
+.aboutMeWrapper{
+    overflow-y: hidden;
+}
+
 .myInfoWrapper{
     color: #fff;
     width: 100%;
@@ -20,5 +25,42 @@ $scndryClr: #08fdd8;
 .hyperText{
     color: $scndryClr;
     text-decoration: underline;
+}
+
+
+.viewAboutMe{
+    margin-top: 0;
+    opacity: 1;
+    transition: 1s;
+    visibility: visible;
+}
+
+.offAboutMe{
+    top: 0;
+   margin-top: -600px;
+}
+
+
+
+@media (max-width:600px){
+    .viewWork{
+        margin: 0;
+        opacity: 1;
+        transition: 1s;
+        visibility: visible;
+    }
+    
+    .offWork{
+        left: 0;
+        margin-left: -300px;
+        opacity: 0;
+        transition: 0;
+        visibility: hidden;
+    }
+
+    .sectionWrapper{
+        max-width: 19rem;
+    }
+    
 }
 

@@ -5,8 +5,7 @@ $scndryClr: #08fdd8;
 .formInput{
     border: 1px solid #fff  ;
     color: #fff;
-    -webkit-text-fill-color: #fff;
-    
+    -webkit-text-fill-color: #fff;  
     max-width: 600px;
     width: 100%;
     margin-top: 5px;
@@ -38,6 +37,15 @@ $scndryClr: #08fdd8;
 }
 
 
+.viewContact{
+    opacity: 1;
+    visibility: visible;
+    transition: 1s;
+}
 
+.closeContact{
+    opacity: 0;
+    visibility: hidden;
+}
 
 

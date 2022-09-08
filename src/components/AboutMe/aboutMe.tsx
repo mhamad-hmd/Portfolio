@@ -1,11 +1,13 @@
 
 import { useEffect, useRef } from 'react';
+import { useInView } from 'react-intersection-observer';
 import { scrollIntoView } from '../scrollIntoView/scrollIntoview';
 import './aboutMe.scss'
 
 export const AboutMe = () => {
 
-    
+    const { ref: displayRef, inView: myElementIsVisible } = useInView();
+
     const myRef = useRef<null | HTMLDivElement>(null)
 
     const handleClick = () => {
@@ -20,8 +22,8 @@ export const AboutMe = () => {
 
     return (
 
-        <div className="aboutMeWrapper  section">
-            <div className="aboutMe ">
+        <div ref={displayRef}  className="aboutMeWrapper  section">
+            <div className={` ${myElementIsVisible? 'viewAboutMe' : 'offAboutMe'} aboutMe px-4`} >
 
                 <div ref={myRef}>
                     <h1 className="sectionTitle">About me</h1>
