@@ -9,20 +9,39 @@ $scndryClr: #08fdd8;
 
 .workWrapper{
     overflow-x: hidden;
+    height: fit-content;
 }
 
 
 .viewWork{
-    margin: 0;
+    transform:translateX(0);
     opacity: 1;
-    transition: 1s;
+    transition: all 1.5s ease;
     visibility: visible;
 }
 
-.offWork{
+.offWorkLeft{
     top: 0;
     left: 0;
-    margin-left: -2395px;
+    transform: translateX(-100vw);
+    opacity: 0;
+    transition: 0;
+    visibility: hidden;
+}
+
+.offWorkRight{
+    top: 0;
+    left: 0;
+    transform: translateX(100vw);
+    opacity: 0;
+    transition: 0;
+    visibility: hidden;
+}
+
+.offWorkTop{
+    top: 0;
+    left: 0;
+    transform: translateY(-100vw);
     opacity: 0;
     transition: 0;
     visibility: hidden;
@@ -52,5 +71,8 @@ $scndryClr: #08fdd8;
     
 }
 
+// .sectionTitle{
+//     transition: 0.3 ease;
+// }
 
 

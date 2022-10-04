@@ -22,16 +22,14 @@ export const AboutMe = () => {
 
     return (
 
-        <div ref={displayRef}  className="aboutMeWrapper  section">
-            <div className={` ${myElementIsVisible? 'viewAboutMe' : 'offAboutMe'} aboutMe px-4`} >
+        <div ref={displayRef}  className="aboutMeWrapper h-fit  section">
+            <div className={` aboutMe mx-4  ${myElementIsVisible? 'viewAboutMe' : 'offAboutMe'}`} >
 
-                <div >
                     <h1  className="sectionTitle">About me</h1>
-                </div>
 
-                <div   className="myInfoWrapper grid justify-center items-center">
+                <div   className={`myInfoWrapper grid justify-center items-center `}>
 
-                    <div className="myInfo max-w-6xl">
+                    <div  className="myInfo max-w-6xl">
                         <p className="break-words">Born in 2002,
                             started learning web development by taking a full stack <a className='hyperText' href="https://www.udemy.com/course/the-complete-web-developer-zero-to-mastery/">course</a>   on Udemy,
                             always trying to grow my knowledge as much as possible and to stay up to date with the industry.
@@ -43,7 +41,7 @@ export const AboutMe = () => {
 
                         <h1 className='skillTitle'>Skills :</h1>
 
-                        <p>React.ts/ typescript/ node.js/ shopify/ webpack/ vite/ tailwindcss/ scss/ express/ postgresql/ cors/ knex</p>
+                        <p>Javascript/ Html5/ css/ React.js/ typescript/ node.js/ shopify/ webpack/ vite/ tailwindcss/ scss/ express.js/ postgresql/ mongodb/ zustand/ redux</p>
 
                     </div>
                     

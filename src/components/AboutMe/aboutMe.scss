@@ -1,56 +1,51 @@
-
 $pageClr: #515152;
 $scndryClr: #08fdd8;
 
-
-.aboutMeWrapper{
+.aboutMeWrapper {
     overflow-y: hidden;
+    
 }
 
-.myInfoWrapper{
+.myInfoWrapper {
     color: #fff;
     width: 100%;
     margin: auto;
-    font-size:20px ;
+    font-size: 20px;
     line-height: 35px;
 }
 
-.skillTitle{
+.skillTitle {
     font-size: 30px;
     font-weight: 600;
     color: $scndryClr;
 }
 
-
-.hyperText{
+.hyperText {
     color: $scndryClr;
     text-decoration: underline;
 }
 
-
-.viewAboutMe{
-    margin-top: 0;
+.viewAboutMe {
+    transform: translateY(0);
     opacity: 1;
-    transition: 1s;
+    transition: all 1.5s ease;
     visibility: visible;
 }
 
-.offAboutMe{
+.offAboutMe {
     top: 0;
-   margin-top: -600px;
+    transform: translateY(-100vh);
 }
 
-
-
-@media (max-width:600px){
-    .viewWork{
+@media (max-width: 600px) {
+    .viewWork {
         margin: 0;
         opacity: 1;
         transition: 1s;
         visibility: visible;
     }
-    
-    .offWork{
+
+    .offWork {
         left: 0;
         margin-left: -300px;
         opacity: 0;
@@ -58,9 +53,7 @@ $scndryClr: #08fdd8;
         visibility: hidden;
     }
 
-    .sectionWrapper{
+    .sectionWrapper {
         max-width: 19rem;
     }
-    
 }
-

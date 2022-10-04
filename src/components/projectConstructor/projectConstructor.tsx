@@ -21,21 +21,27 @@ export const ProjectConstructor = (props: props) => {
 
 
     return (
-        <div className='projectWrapper  m-auto py-6  '>
-            <div className='projectInfo flex  justify-between '>
-                <div className=''>
-                    <div className='mb-2 '>
+        <div className='projectWrapper  m-auto pb-3  '>
+            <div className='projectInfo '>
+                <div className='mb-2 flex flex-col justify-center'>
 
-                        <h1 className='projectTitle'>{title}</h1>
-                        <h1>{typeOfwork}</h1>
-                        {password.length > 0 &&
-                            <h1>Preview Password: {password}</h1>
-                        }
+                    <div className='previewContainer py-5'>
 
-
+                        <img className='previewImg' src={imgPath} alt="" />
 
                     </div>
-                    
+
+
+                    <h1 className='projectTitle'>{title}</h1>
+                    <h1>{typeOfwork}</h1>
+                    {password.length > 0 &&
+                        <h1>Preview Password: {password}</h1>
+                    }
+
+
+
+
+
                     <div className='py-2'>
                         <h1>Tools Used:</h1>
                         <p>{tools}</p>
@@ -45,26 +51,20 @@ export const ProjectConstructor = (props: props) => {
                         <p>{aboutIt}</p>
 
                     </div>
+
+                    <a href={projectUrl} className="w-full text-center mt-5 mb-2">
+                        <button id='projectBtn' className='btn btnA m-auto text-center '>
+
+                            Preview
+
+                        </button>
+                    </a>
                 </div>
-
-                <div className='previewContainer py-5'>
-
-                    <img className='previewImg' src={imgPath} alt="" />
-
-                </div>
-
             </div>
 
 
-            <div className='text-center'>
-                <a href={projectUrl}>
-                    <button id='projectBtn' className='btn btnA m-auto '>
 
-                        Preview
 
-                    </button>
-                </a>
-            </div>
 
 
         </div>

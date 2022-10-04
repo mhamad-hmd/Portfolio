@@ -1,75 +1,115 @@
 $pageClr: #515152;
 $scndryClr: #08fdd8;
 
-
-.previewImg{
+.previewImg {
     border-radius: 6px;
-    max-width: 300px;
+    max-width: 100%;
     width: 100%;
-    height: 100%;   
-    max-height: 300px; /* [1.1] Set it as per your need */
+
+    height: 300px; /* [1.1] Set it as per your need */
     overflow: hidden;
     transform-origin: 50% 65%;
-  transition: transform 3s, filter 1.5s ease-in-out;
-  filter: brightness(120%);
-
+    transition: transform 3s, filter 1.5s ease-in-out;
+    filter: brightness(70%);
 }
-.previewContainer{
+.previewContainer {
     overflow: hidden;
 }
 
-.previewContainer{
-    padding-right: 10px ;
-    
+.previewContainer {
+    padding-right: 10px;
 }
 
-.previewContainer:hover .previewImg{
+.previewContainer:hover .previewImg {
     filter: brightness(100%);
     transform: scale(1.2);
 }
 
-.aboutIt{
+.aboutIt {
     max-width: 800px;
 }
 
-
-.projectInfo{
+.projectInfo {
     width: 100%;
     height: auto;
 }
 
-
-@media (min-width:768px)  {
-
-    .projectTitle{
-        font-size: 70px;
+@media (min-width: 768px) {
+    .projectTitle {
+        font-size: 50px;
     }
 
-    .projectInfo{
+    .projectInfo {
         font-size: 20px;
         padding-left: 5px;
     }
-
 }
 
-
-@media (min-width: 320px ) and (max-width:767px ) {
-    .projectTitle{
-        font-size: 30px;
-      }
-
-    .projectInfo{
-        font-size: 15px;
-        flex-wrap: wrap ;
+@media (min-width: 320px) and (max-width: 767px) {
+    .projectTitle {
+        font-size: 20px;
     }
 
+    .projectInfo {
+        font-size: 15px;
+        flex-wrap: wrap;
+    }
 
-    .previewContainer{
+    .previewContainer {
         margin: auto;
         padding: 0;
     }
-
 }
 
+.projectWrapper {
+    max-width: 500px;
+    font-size: 6.2rem;
+    animation: pulsate 1.5s infinite alternate;  
+    border: 0.1rem solid #fff;
+    border-radius: 1rem;
+    padding: 0.2em;
+    box-shadow: 0 0 .2rem #fff,
+              0 0 .2rem #fff,
+              0 0 1rem $scndryClr,
+              0 0 0.4rem $scndryClr,
+              0 0 1.0rem $scndryClr,
+              inset 0 0 0.5rem $scndryClr; 
+  }
+  
+//   @keyframes pulsate {
+      
+//     100% {
+  
+//         text-shadow:
+//         0 0 4px #fff,
+//         0 0 11px #fff,
+//         0 0 19px #fff,
+//         0 0 40px $scndryClr,
+//         0 0 80px $scndryClr,
+//         0 0 90px $scndryClr,
+//         0 0 100px $scndryClr,
+//         0 0 150px $scndryClr;
+    
+//     }
+    
+//     0% {
+  
+//       text-shadow:
+//       0 0 2px #fff,
+//       0 0 4px #fff,
+//       0 0 6px #fff,
+//       0 0 10px $scndryClr,
+//       0 0 45px $scndryClr,
+//       0 0 55px $scndryClr,
+//       0 0 70px $scndryClr,
+//       0 0 80px $scndryClr;
+  
+//   }
+// }
+.previewImg {
+    flex: 1;
+}
 
-
+.scndCol{
+    overflow-y: hidden;
+}

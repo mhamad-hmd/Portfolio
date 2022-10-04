@@ -18,8 +18,8 @@ export const Greeting = () => {
   React.useEffect(() => {
     const options = {
       strings: [`Hello, I'm Mohamad Hammoud`, `I'am a Web Developer`],
-      typeSpeed: 70,
-      backSpeed: 50,
+      typeSpeed: 60,
+      backSpeed: 40,
 
     };
 
