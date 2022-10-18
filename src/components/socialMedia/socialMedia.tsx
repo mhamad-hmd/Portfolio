@@ -3,10 +3,9 @@ import './socialMedia.scss';
 
 
 export const SocialMedia = () => {
-    console.log('SocialMedia')
 
     return(
-        <div className='mediacontainer section'>
+        <div className='mediacontainer '>
             <h1 className='socialTitle'>Let's be friends</h1>
 
             <div className='iconWrapper flex justify-center'>

@@ -38,7 +38,7 @@ export const ContactMe = () => {
                         <input type="hidden" name='_captcha' value='false' />
 
                         {/* check if successfull */}
-                        <input type="hidden" name="_next" value="http://127.0.0.1:5173/success"></input>
+                        <input type="hidden" name="_next" value="/success"></input>
 
                         <div className='flex flex-wrap justify-between '>
                             <input className='formInput miniInput md:m-0 sm:mx-1.5' type="text" name='Name' placeholder='Name' />
