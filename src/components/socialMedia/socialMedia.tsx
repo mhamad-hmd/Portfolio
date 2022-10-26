@@ -5,7 +5,7 @@ import './socialMedia.scss';
 export const SocialMedia = () => {
 
     return(
-        <div className='mediacontainer '>
+        <div className='mediacontainer P'>
             <h1 className='socialTitle'>Let's be friends</h1>
 
             <div className='iconWrapper flex justify-center'>

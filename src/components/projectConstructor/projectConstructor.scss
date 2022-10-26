@@ -8,8 +8,8 @@ $scndryClr: #08fdd8;
 
     height: 300px; /* [1.1] Set it as per your need */
     overflow: hidden;
-    transform-origin: 50% 65%;
-    transition: transform 3s, filter 1.5s ease-in-out;
+    transform-origin: 50% 50%;
+    transition: transform 2s, filter .5s ease;
     filter: brightness(70%);
 }
 .previewContainer {
@@ -22,7 +22,7 @@ $scndryClr: #08fdd8;
 
 .previewContainer:hover .previewImg {
     filter: brightness(100%);
-    transform: scale(1.2);
+    transform: scale(110%);
 }
 
 .aboutIt {
