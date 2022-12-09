@@ -30,11 +30,7 @@ export const AboutMe = () => {
                 <div   className={`myInfoWrapper grid justify-center items-center `}>
 
                     <div  className="myInfo max-w-6xl">
-                        <p className="break-words">Born in 2002,
-                            started learning web development by taking a full stack <a className='hyperText' href="https://www.udemy.com/course/the-complete-web-developer-zero-to-mastery/">course</a>   on Udemy,
-                            always trying to grow my knowledge as much as possible and to stay up to date with the industry.
-                            I'm very good in working with teams, love to ask alot of questions to wrap my head around the code as much as possible,
-                            and probably one of the most dedicated and disciplined guy you'll meet  </p>
+                        <p className="break-words">Started my web development journey by a full stack course on Udemy, and ever since I am acquiring my skills and knowledge to always stay up to date in this field. I am a cooperative worker, and as my projects reveal about me, I am dedicated, responsible and disciplined and also a perfectionist.</p>
                     </div>
 
                     <div ref={myRef} className='py-4'>

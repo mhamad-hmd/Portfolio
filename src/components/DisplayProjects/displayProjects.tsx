@@ -2,6 +2,7 @@
 import storePreview from '../../assets/testStorePreview.png';
 import smartBrainPrev from '../../assets/smartBrainPrev.png'
 import EshopPrev from '../../assets/ESHOP.png'
+import royalCoats from '../../assets/royal-coats.png'
 import { ProjectConstructor } from '../projectConstructor/projectConstructor';
 import './displayProjects.scss';
 import { useEffect, useRef } from 'react';
@@ -47,6 +48,10 @@ export const DisplayProjects = () => {
 
                     <div className={`${myElementIsVisible ? 'viewWork' : 'offWorkTop'}`}>
                         <ProjectConstructor title={'ESHOP'} typeOfwork={'Full-Stack'} password={''} tools={'Vite/ react/ typescript/ node.js/ express/ stripe/ mongodb/ jsonwebtoken/ crypto-js/ zustand/react-router/ axios/ scss/ tailwind '} aboutIt={'ESHOP is a full functional ecommerce website project it was done from scratch no platform was used in it. I did it to understand more about how the backend of ecommerce websites work '} imgPath={EshopPrev} projectUrl={'https://eshop-webproject.herokuapp.com/'} />
+                    </div>
+
+                    <div className={`${myElementIsVisible ? 'viewWork' : 'offWorkTop'}`}>
+                        <ProjectConstructor title={'Royal Coats'} typeOfwork={'Front-End'} password={'12345'} tools={'Vite/ react/ typescript/ scss/ tailwind '} aboutIt={'Royal Coats is a shopify theme website done from completely scratch, the design was made by me '} imgPath={royalCoats} projectUrl={'https://royal-coats.myshopify.com/'} />
                     </div>
 
 
