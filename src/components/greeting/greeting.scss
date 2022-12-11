@@ -3,26 +3,28 @@ $pageClr: #515152;
 $scndryClr: #08fdd8;
 
 .greetingBox {
+    max-width: 650px;
     color: #fff ;
     font-size: 17px;
-    // padding-top: 15%;
-    margin: auto;
     letter-spacing: 1px;
-    line-height: 26px;
   }
   
   .greetingBox h1 {
-    padding: 20px;
     line-height: 55px;
-
     font-weight: 700;
   }
   
-  .btnDiv{
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 30px;
+  .myImg{
+    object-fit: cover;
+    max-width: 350px;
+    max-height: 470px;
   }
+
+  .autoType{
+  font-family: 'League Spartan', sans-serif;
+    
+  }
+
   
 
 

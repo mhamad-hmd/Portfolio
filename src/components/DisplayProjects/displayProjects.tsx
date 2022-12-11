@@ -39,9 +39,9 @@ export const DisplayProjects = () => {
                 <div className=' md:gap-5 xs:gap-10  flex flex-wrap justify-center my-4' >
                
                     <div className={`${myElementIsVisible ? 'viewWork' : 'offWorkLeft'}`}>
-                        <ProjectConstructor title={'Shopify Theme'} typeOfwork={'FrontEnd'} password={'12345'} tools={'liquid/ react.ts/ vite/ tailwindcss/'} aboutIt={'Since I was using shopify that takes care of all the backend, this project ended up being pure frontend  '} imgPath={storePreview} projectUrl={'https://storefortestapp.myshopify.com/'} />
+                        <ProjectConstructor index={"01"} title={'Shopify Theme'} typeOfwork={'FrontEnd'} password={'12345'} tools={'liquid/ react.ts/ vite/ tailwindcss/'} aboutIt={'Since I was using shopify that takes care of all the backend, this project ended up being pure frontend  '} imgPath={storePreview} projectUrl={'https://storefortestapp.myshopify.com/'} />
                     </div>
-
+{/* 
                     <div className={`${myElementIsVisible ? 'viewWork' : 'offWorkRight'}`}>
                         <ProjectConstructor title={'SmartBrain'} typeOfwork={'Full Stack'} password={''} tools={'react.js/ webpack/ tailwindcss/ Express/ postgresql/zustand '} aboutIt={'SmartBrain was the last project in my course, this website takes url of an image and detects the face in it '} imgPath={smartBrainPrev} projectUrl={'https://mhamad-hmd.github.io/Smart-Brain/'} />
                     </div>
@@ -52,7 +52,7 @@ export const DisplayProjects = () => {
 
                     <div className={`${myElementIsVisible ? 'viewWork' : 'offWorkTop'}`}>
                         <ProjectConstructor title={'Royal Coats'} typeOfwork={'Front-End'} password={'12345'} tools={'Vite/ react/ typescript/ scss/ tailwind '} aboutIt={'Royal Coats is a shopify theme website done from completely scratch, the design was made by me '} imgPath={royalCoats} projectUrl={'https://royal-coats.myshopify.com/'} />
-                    </div>
+                    </div> */}
 
 
                 </div>

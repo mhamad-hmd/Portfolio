@@ -1,13 +1,13 @@
 import React, { useRef } from 'react';
 import Typed from 'typed.js';
 import './greeting.scss'
-
+import myImg from '../../assets/myImg.png'
 
 
 
 export const Greeting = () => {
 
-  
+
 
 
   // Create reference to store the DOM element containing the animation
@@ -34,13 +34,14 @@ export const Greeting = () => {
   }, [])
 
   return (
-    <div className="greetingBox flex items-center justify-center h-screen text-center ">
-      <div>
+    <div className="heroContainer max-w-7xl flex justify-between mx-8 items-center">
 
-        <h1 className='md:text-7xl sm:text-5xl xs:text-4xl'><span className='autoType ' ref={el}></span></h1>
+      <div className="greetingBox flex flex-col items-start justify-center gap-12 h-screen  ">
+
+        <h1 className='md:text-6xl sm:text-4xl xs:text-3xl'><span className='autoType' ref={el}></span></h1>
         <p className='md:text-base xs:text-sm'>Feel free to reach out if you need help in making a website for you or your business</p>
 
-        <div className='flex justify-center flex-wrap'>
+        <div className='flex justify-start flex-wrap gap-8'>
           <div className='btnDiv'>
             <button id='myWork' className='btn btnB'  >My Work</button>
           </div>
@@ -55,8 +56,12 @@ export const Greeting = () => {
 
 
         </div>
+
       </div>
 
+      <img className='myImg mb-4 mr-20' src={myImg} alt="" />
+
     </div>
+
   )
 }

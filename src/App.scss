@@ -1,75 +1,40 @@
-$pageClr: #000000;
-$scndryClr: #08fdd8;
+$pageClr: #4B4E53;
+$scndryClr: #F6F3F0;
+$third: #000;
 
-@font-face {
-  font-family: "Montserrat";
-  src: url(./assets/Montserrat-VariableFont_wght.ttf);
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@200;300;400;500;600;700;800;900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+
+
+h1, h2, h3{
+  font-family: 'League Spartan', sans-serif;
+}
+
+p,span{
+  font-family: 'Libre Baskerville', serif;
+  color: #CDCACA;
 }
 
 .btnA {
-  background: linear-gradient(45deg, $pageClr 50%, $scndryClr 50%);
-  background-clip: text;
-  -webkit-text-fill-color: $pageClr;
+  background: $third;
+  -webkit-text-fill-color: $scndryClr;
+  border-color: $third !important;
   position: relative;
   font-weight: 600;
   transition: 0.7s;
 }
 
-.btnA::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: linear-gradient(45deg, $scndryClr 50%, $pageClr 50%);
-  z-index: -1;
-}
 
-.btnA,
-.btnA:after {
-  background-size: 400px;
-  background-position: 0;
-  transition: 0.7s;
-}
 
-.btnA:hover,
-.btnA:hover:after {
-  background-position: 99%;
-  -webkit-text-fill-color: #fff;
-}
+
 
 .btnB {
-  background: linear-gradient(45deg, $scndryClr 50%, $pageClr 50%);
+  background: transparent;
   background-clip: text;
   -webkit-text-fill-color: #fff;
   position: relative;
   font-weight: 600;
 }
 
-.btnB:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: linear-gradient(45deg, $scndryClr 50%, $pageClr 50%);
-  z-index: -1;
-}
-
-.btnB,
-.btnB:after {
-  background-size: 400px;
-  background-position: 99%;
-  transition: 0.7s;
-}
-
-.btnB:hover,
-.btnB:hover:after {
-  background-position: 0;
-  -webkit-text-fill-color: $pageClr;
-}
 
 .sectionTitle {
   text-align: center;
@@ -89,9 +54,9 @@ $scndryClr: #08fdd8;
   }
   .btn {
     display: inline-block;
-    border-radius: 6px;
-    border: 2px solid $scndryClr;
-    padding: 10px 30px;
+    border-radius: 10px;
+    border: 2px solid $third;
+    padding: 7px 17px;
     font-size: 20px;
   }
 }
