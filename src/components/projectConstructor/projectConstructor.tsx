@@ -21,33 +21,33 @@ export const ProjectConstructor = (props: props) => {
     const infoContainer = useRef<HTMLDivElement>(null);
     const previewImgPosition = previewImg.current?.getBoundingClientRect().top!;
 
-    let previewTranslate = 0;
-    let infoTranslate = 0;
-    let previewScale = 1.2;
-    let lastScrollTop = 0;
+//     let previewTranslate = 0;
+//     let infoTranslate = 0;
+//     let previewScale = 1.2;
+//     let lastScrollTop = 0;
 
-    previewImgPosition && document.addEventListener('scroll', (e: any) => {
-
-        if (previewImgPosition - window.scrollY < 430 && previewImgPosition - window.scrollY > -630) {
-            const st = window.pageYOffset
-            if (st > lastScrollTop) {
-                previewTranslate += .09
-                infoTranslate += .03
-                previewImg.current!.style.transform = `scale(${previewScale}) translateY(${previewTranslate}%)`
-                infoContainer.current!.style.transform = `translateY(${infoTranslate}%)`
-            } else if (st < lastScrollTop) {
-                previewTranslate -= .09
-                infoTranslate -= .03
-                previewImg.current!.style.transform = `scale(${previewScale}) translateY(${previewTranslate}%)`
-                infoContainer.current!.style.transform = `translateY(${infoTranslate}%)`
-                console.log('up')
-            }
+//     previewImgPosition && document.addEventListener('scroll', (e: any) => {
+// console.log(previewImgPosition - window.scrollY)
+//         if (previewImgPosition - window.scrollY < 830 && previewImgPosition - window.scrollY > -630) {
+//             const st = window.pageYOffset
+//             if (st > lastScrollTop) {
+//                 previewTranslate += .099
+//                 infoTranslate += .03
+//                 previewImg.current!.style.transform = `scale(${previewScale}) translateY(${previewTranslate}%)`
+//                 infoContainer.current!.style.transform = `translateY(${infoTranslate}%)`
+//             } else if (st < lastScrollTop) {
+//                 previewTranslate -= .09
+//                 infoTranslate -= .03
+//                 previewImg.current!.style.transform = `scale(${previewScale}) translateY(${previewTranslate}%)`
+//                 infoContainer.current!.style.transform = `translateY(${infoTranslate}%)`
+//                 console.log('up')
+//             }
            
-            lastScrollTop = st <= 0 ? 0 : st
-        }
+//             lastScrollTop = st <= 0 ? 0 : st
+//         }
 
 
-    })
+//     })
 
 
 

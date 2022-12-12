@@ -3,6 +3,7 @@ import { useEffect, useRef } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { scrollIntoView } from '../scrollIntoView/scrollIntoview';
 import './aboutMe.scss'
+import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 
 export const AboutMe = () => {
 
@@ -22,7 +23,7 @@ export const AboutMe = () => {
 
     return (
 
-        <div ref={displayRef}  className="aboutMeWrapper h-fit  section">
+        <Parallax pages={1}  className="aboutMeWrapper h-fit  section">
             <div className={` aboutMe mx-4  ${myElementIsVisible? 'viewAboutMe' : 'offAboutMe'}`} >
 
                     <h1  className="sectionTitle">About me</h1>
@@ -46,7 +47,7 @@ export const AboutMe = () => {
 
             </div>
 
-        </div>
+        </Parallax>
 
     )
 }

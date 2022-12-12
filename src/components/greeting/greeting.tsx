@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import Typed from 'typed.js';
 import './greeting.scss'
 import myImg from '../../assets/myImg.png'
+import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 
 
 
@@ -34,7 +35,8 @@ export const Greeting = () => {
   }, [])
 
   return (
-    <div className="heroContainer max-w-7xl flex justify-between mx-8 items-center">
+
+    <div className="heroContainer max-w-7xl flex justify-between m-auto items-center">
 
       <div className="greetingBox flex flex-col items-start justify-center gap-12 h-screen  ">
 
