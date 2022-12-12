@@ -1,10 +1,12 @@
-$pageClr: #515152;
-$scndryClr: #08fdd8;
+$pageClr: #4B4E53;
+$scndryClr: #F6F3F0;
+$third: #000;
 
 .previewImg {
     border-radius: 6px;
     max-width: 100%;
     flex-basis: 50%;
+    max-width: 600px;
     height: 400px; /* [1.1] Set it as per your need */
     overflow: hidden;
     transform-origin: 50% 100%;
@@ -17,17 +19,18 @@ $scndryClr: #08fdd8;
 .InfoContainer{
     width: 100%;
     flex-basis: 50%;
-
 }
 
 .previewContainer {
     overflow: hidden;
+    border-radius: 2px;
 }
 
 .typeOfWork{
     font-size: 1.5rem;
-    font-family: 'Libre Baskerville', serif;
     color: #CDCACA;
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 300;
 }   
 
 .InfoContainer, .aboutIt{
@@ -48,6 +51,8 @@ $scndryClr: #08fdd8;
     }
     span{
         font-size: 1.5rem;
+        font-family: 'League Spartan', sans-serif;
+        font-weight: 300;
     }
 }
 
@@ -98,6 +103,7 @@ $scndryClr: #08fdd8;
 
 .projectWrapper {
     max-width: 1280px;
+    overflow: hidden;
     width: 100%;
 }
 

@@ -38,7 +38,7 @@ export const DisplayProjects = () => {
 
                 <div className=' md:gap-5 xs:gap-10  flex flex-wrap justify-center my-4' >
                
-                    <div className={`${myElementIsVisible ? 'viewWork' : 'offWorkLeft'}`}>
+                    <div className={"`${myElementIsVisible ? 'viewWork' : 'offWorkLeft'}`"}>
                         <ProjectConstructor index={"01"} title={'Shopify Theme'} typeOfwork={'FrontEnd'} password={'12345'} tools={'liquid/ react.ts/ vite/ tailwindcss/'} aboutIt={'Since I was using shopify that takes care of all the backend, this project ended up being pure frontend  '} imgPath={storePreview} projectUrl={'https://storefortestapp.myshopify.com/'} />
                     </div>
 {/* 

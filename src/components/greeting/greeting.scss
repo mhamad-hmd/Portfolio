@@ -1,6 +1,6 @@
-
-$pageClr: #515152;
-$scndryClr: #08fdd8;
+$pageClr: #4B4E53;
+$scndryClr: #F6F3F0;
+$third: #000;
 
 .greetingBox {
     max-width: 650px;
@@ -22,6 +22,7 @@ $scndryClr: #08fdd8;
 
   .autoType{
   font-family: 'League Spartan', sans-serif;
+  color: $scndryClr;
     
   }
 

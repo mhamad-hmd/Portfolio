@@ -8,16 +8,21 @@ import {BrowserRouter as Router, Routes, Route  } from "react-router-dom";
 import { SuccessPage } from './components/successPage/successPage';
 import { SocialMedia } from './components/socialMedia/socialMedia'
 import { useRef } from 'react'
+import Scrollbar from 'smooth-scrollbar';
 
 
 function App() {
 
+  const options = {
+    "damping": 0.1,
+    "alwaysShowTracks": true
+  }
 
 
 
   return (
     <Router>
-    <div className="App">
+    <div id="my-scrollbar" className="App">
      
         {/* <ParticlesBackground /> */}
 
