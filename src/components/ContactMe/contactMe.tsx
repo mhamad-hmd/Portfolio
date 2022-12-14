@@ -22,40 +22,61 @@ export const ContactMe = () => {
 
     return (
         <div ref={displayRef} className='contactWrapper section'>
-            <div className={`${myElementIsVisible? 'viewContact': 'closeContact'}  contactSlide`} >
+            <div className={`${myElementIsVisible ? 'viewContact' : 'closeContact'}  contactSlide`} >
 
-                <div>
-                    <h1 ref={myRef} className='sectionTitle'>Contact ME</h1>
-                </div>
+                    <h1 ref={myRef} className='sectionTitle mb-8'>Contact Me</h1>
 
-                <div>
-                    <form action="https://formsubmit.co/ce508cfc734643d8a6f4809a254afebc" method="POST" className='grid max-w-6xl m-auto '>
+                <form action="https://formsubmit.co/ce508cfc734643d8a6f4809a254afebc" method="POST" className='grid gap-12 w-full max-w-6xl m-auto '>
 
-                        {/* Honeypot */}
-                        <input className='hidden' type="text" name='_honey' />
+                    {/* Honeypot */}
+                    <input className='hidden' type="text" name='_honey' />
 
-                        {/* disable captcha */}
-                        <input type="hidden" name='_captcha' value='false' />
+                    {/* disable captcha */}
+                    <input type="hidden" name='_captcha' value='false' />
 
-                        {/* check if successfull */}
-                        <input type="hidden" name="_next" value="https://mhmd-portfolio.herokuapp.com/success"></input>
-
-                        <div className='flex flex-wrap justify-between '>
-                            <input className='formInput miniInput md:m-0 sm:mx-1.5' type="text" name='Name' placeholder='Name' />
-                            <input className='formInput miniInput md:m-0 sm:mx-1.5' type="text" name="Last&nbsp;Name" placeholder='LastName' />
+                    {/* check if successfull */}
+                    <input type="hidden" name="_next" value="https://mhmd-portfolio.herokuapp.com/success"></input>
+                    <div className="contactFormInput flex  flex-wrap ">
+                        <div className="myInfo / flex-1 flex flex-col gap-8 items-center">
+                            <h2 className='myInfoTitle'>Get In Touch</h2>
+                            <div className='myInfoAbout grid gap-4'>
+                                <p>Beirut - Lebanon</p>
+                                <p>mhamad.hmd20@gmail.com</p>
+                                <p>(+961) 78 846 204</p>
+                            </div>
                         </div>
-                        <div className='flex flex-wrap xs:justify-between md:justify-evenly'>
-                            <input className='formInput miniInput' name='Email' type="Email" placeholder='Email ' />
-                            <input className=' formInput miniInput' type="text" name='Phone' placeholder='PhoneNumber' />
+                        <div className="formInputContainer gap-6 / flex-1 flex flex-col justify-end / w-full">
+
+                            <div className="inputWrapper">
+                                <label className='inputLabel' htmlFor="name">Name</label>
+                                <input id='name' className='formInput miniInput md:m-0 sm:mx-1.5' type="text" name='Name' />
+                            </div>
+                            
+                            <div className="inputWrapper">
+                                <label className='inputLabel' htmlFor="lastName">Last Name</label>
+                                <input id='lastName' className='formInput miniInput md:m-0 sm:mx-1.5' type="text" name="Last&nbsp;Name" />
+                            </div>
+                            
+                            <div className="inputWrapper">
+                                <label className='inputLabel' htmlFor="email">Email</label>
+                                <input id='email' className='formInput miniInput' name='Email' type="Email" />
+                            </div>
+                            
+                            <div className="inputWrapper">
+                                <label className='inputLabel' htmlFor="phone">Phone</label>
+                                <input id='phone' className=' formInput miniInput' type="text" name='Phone' />
+                            </div>
+                            
+                            <div className="inputWrapper">
+                                <label className='inputLabel' htmlFor="about">About</label>
+                                <textarea id='about' className=' formInput aboutInput break-words' name="About" />
+                            </div>
                         </div>
-                        <div className='flex justify-center'>
-                            <textarea className=' formInput aboutInput break-words' name="About" id="" placeholder='About' />
-                        </div>
-                        <div className='flex my-2'>
-                            <button className='btn btnA m-auto' type='submit'>Submit</button>
-                        </div>
-                    </form>
-                </div>
+                    </div>
+                    <div className='flex my-2'>
+                        <button className='btn btnA m-auto' type='submit'>Submit</button>
+                    </div>
+                </form>
             </div>
 
         </div>

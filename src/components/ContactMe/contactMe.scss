@@ -1,40 +1,65 @@
 
-$pageClr: #515152;
-$scndryClr: #08fdd8;
+$pageClr: #4B4E53;
+$scndryClr: #F6F3F0;
+$third: #000;
 
 .formInput{
-    border: 1px solid #fff  ;
+    border-bottom: 1px solid $third  ;
     color: #fff;
     -webkit-text-fill-color: #fff;  
-    max-width: 600px;
-    width: 100%;
     margin-top: 5px;
     margin-bottom: 5px;
     padding-left: 5px;
+    max-width: 400px;
+    width: 100%;
     outline:none;
     background: transparent;
 }
 
+.inputWrapper{
+    display: grid;
 
+
+}
+
+.myInfoTitle{
+    font-size: 3rem;
+    color: $scndryClr;
+}
+
+.inputLabel{
+    color: $scndryClr;
+}
+
+.formInputContainer{
+    max-width: 500px;
+}
+
+.myInfoAbout{
+    p{
+        font-family: 'League Spartan', sans-serif;
+        font-size: 1.2em;
+    }
+}
 
 .aboutInput{
-    height: 100px;
+    height: 50px;
 
 }
 
 
-@media (min-width:768px)  {
-    .miniInput{
-        max-width: 300px;  
+// @media (min-width:768px)  {
+//     .miniInput{
+//         max-width: 300px;  
           
-    }
-}
+//     }
+// }
 
-@media (min-width: 320px ) and (max-width:767px ) {
-    .miniInput{
-        max-width: 800px;
-    }
-}
+// @media (min-width: 320px ) and (max-width:767px ) {
+//     .miniInput{
+//         max-width: 800px;
+//     }
+// }
 
 
 .viewContact{

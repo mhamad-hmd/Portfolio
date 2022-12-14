@@ -23,14 +23,14 @@ export const AboutMe = () => {
 
     return (
 
-        <Parallax pages={1}  className="aboutMeWrapper h-fit  section">
-            <div className={` aboutMe mx-4  ${myElementIsVisible? 'viewAboutMe' : 'offAboutMe'}`} >
+        <div  className="aboutMeWrapper">
+            <div className={` aboutMe mx-4  `} >
 
                     <h1  className="sectionTitle">About me</h1>
 
                 <div   className={`myInfoWrapper grid justify-center items-center `}>
 
-                    <div  className="myInfo max-w-6xl">
+                    <div  className="myInfo max-ww-6xl">
                         <p className="break-words">Started my web development journey by a full stack course on Udemy, and ever since I am acquiring my skills and knowledge to always stay up to date in this field. I am a cooperative worker, and as my projects reveal about me, I am dedicated, responsible and disciplined and also a perfectionist.</p>
                     </div>
 
@@ -47,7 +47,7 @@ export const AboutMe = () => {
 
             </div>
 
-        </Parallax>
+        </div>
 
     )
 }

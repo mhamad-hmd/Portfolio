@@ -1,17 +1,21 @@
 $pageClr: #515152;
 $scndryClr: #08fdd8;
 
-.aboutMeWrapper {
-    overflow-y: hidden;
-    
-}
+
 
 .myInfoWrapper {
     color: #fff;
+    max-width: 900px;
     width: 100%;
     margin: auto;
     font-size: 20px;
     line-height: 35px;
+    
+}
+
+
+.myInfo p{
+    max-width: 60char;
 }
 
 .skillTitle {
@@ -25,33 +29,33 @@ $scndryClr: #08fdd8;
     text-decoration: underline;
 }
 
-.viewAboutMe {
-    transform: translateY(0);
-    opacity: 1;
-    transition: all 1.5s ease;
-    visibility: visible;
-}
+// .viewAboutMe {
+//     transform: translateY(0);
+//     opacity: 1;
+//     transition: all 1.5s ease;
+//     visibility: visible;
+// }
 
-.offAboutMe {
-    top: 0;
-    transform: translateY(-100vh);
-}
+// .offAboutMe {
+//     top: 0;
+//     transform: translateY(-100vh);
+// }
 
 @media (max-width: 600px) {
-    .viewWork {
-        margin: 0;
-        opacity: 1;
-        transition: 1s;
-        visibility: visible;
-    }
+    // .viewWork {
+    //     margin: 0;
+    //     opacity: 1;
+    //     transition: 1s;
+    //     visibility: visible;
+    // }
 
-    .offWork {
-        left: 0;
-        margin-left: -300px;
-        opacity: 0;
-        transition: 0;
-        visibility: hidden;
-    }
+    // .offWork {
+    //     left: 0;
+    //     margin-left: -300px;
+    //     opacity: 0;
+    //     transition: 0;
+    //     visibility: hidden;
+    // }
 
     .sectionWrapper {
         max-width: 19rem;
