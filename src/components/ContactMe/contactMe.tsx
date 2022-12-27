@@ -1,6 +1,7 @@
 
 import { useRef } from 'react';
 import { useInView } from 'react-intersection-observer';
+import { myParallax } from '../../myParallax/myParallax';
 import { scrollIntoView } from '../scrollIntoView/scrollIntoview';
 import './contactMe.scss';
 
@@ -10,6 +11,7 @@ export const ContactMe = () => {
     const { ref: displayRef, inView: myElementIsVisible } = useInView();
 
     const myRef = useRef<null | HTMLDivElement>(null)
+    const contactMeRef = useRef<null | HTMLDivElement>(null)
 
 
     const handleClick = () => {
@@ -19,10 +21,11 @@ export const ContactMe = () => {
     const contactMeBtn = 'contactMe'
 
     scrollIntoView(contactMeBtn, handleClick)
+    myParallax(contactMeRef, 0.3, true)
 
     return (
-        <div ref={displayRef} className='contactWrapper section'>
-            <div className={`${myElementIsVisible ? 'viewContact' : 'closeContact'}  contactSlide`} >
+        <div ref={contactMeRef}   className='contactWrapper section'>
+            <div ref={displayRef} className={`${myElementIsVisible ? 'viewContact' : 'closeContact'}  contactSlide`} >
 
                     <h1 ref={myRef} className='sectionTitle mb-8'>Contact Me</h1>
 

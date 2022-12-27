@@ -1,5 +1,7 @@
 
 import { useEffect, useRef, useState } from 'react';
+import { useInView } from 'react-intersection-observer';
+import { myParallax } from '../../myParallax/myParallax';
 import './projectConstructor.scss'
 
 type props = {
@@ -7,28 +9,30 @@ type props = {
     typeOfwork: string,
     password: string,
     tools: string,
-    aboutIt: string,
     imgPath: string,
     projectUrl: string,
     index: string,
     even: boolean,
-    parallax:any,
-
+    myParallaxView:boolean,
+    scrollSpeed: number,
 }
 
 export const ProjectConstructor = (props: props) => {
 
-    const { title, typeOfwork, password, tools, aboutIt, imgPath, projectUrl, index, even, parallax } = props;
+    const { title, typeOfwork, password, imgPath, projectUrl, index, even, scrollSpeed } = props;
     const previewImg = useRef<HTMLImageElement>(null);
     const infoContainer = useRef<HTMLDivElement>(null);
     const previewImgPosition = previewImg.current?.getBoundingClientRect().top!;
-
+    const { ref: displayRef, inView: myElementIsVisible } = useInView();
+    myParallax(previewImg, scrollSpeed, myElementIsVisible)
+    myParallax(infoContainer, scrollSpeed, myElementIsVisible)
 
     let previewTranslate = 0;
     let infoTranslate = 0;
     let previewScale = 1.2;
     let lastScrollTop = 0;
 
+    
 
     // previewImgPosition && parallax.current.container.current!.addEventListener('scroll', (e: any) => {
     //     if (previewImgPosition - window.scrollY < 830 && previewImgPosition - window.scrollY > -630) {
@@ -52,15 +56,14 @@ export const ProjectConstructor = (props: props) => {
 
     // })
 
-
-
+ document.getElementById('previewImg')?.getBoundingClientRect
 
 
     return (
-        <div className={`projectWrapper flex  gap-8  m-auto pb-3  ${even ? "flex-row" : "flex-row-reverse"}`} >
+        <div ref={displayRef}  className={`projectWrapper flex  gap-8  m-auto pb-3  ${even ? "flex-row" : "flex-row-reverse"}`} >
 
             <div className='previewImgContainer'>
-                <img ref={previewImg} className='previewImg' src={imgPath} alt="" />
+                <img ref={previewImg} id="previewImg" className='previewImg' src={imgPath} alt="" />
             </div>
 
             <div ref={infoContainer} className={`InfoContainer flex flex-col justify-between items-between gap-4 mt-4  ${even ? "items-start" : "items-end"}`}>

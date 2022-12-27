@@ -3,13 +3,17 @@ import { useEffect, useRef } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { scrollIntoView } from '../scrollIntoView/scrollIntoview';
 import './aboutMe.scss'
-import { Parallax, ParallaxLayer } from '@react-spring/parallax';
+import { myParallax } from '../../myParallax/myParallax';
 
 export const AboutMe = () => {
 
+    const myRef = useRef<null | HTMLDivElement>(null)
+    const aboutMeWrapper = useRef<null | HTMLDivElement>(null)
+
     const { ref: displayRef, inView: myElementIsVisible } = useInView();
 
-    const myRef = useRef<null | HTMLDivElement>(null)
+    myParallax(aboutMeWrapper, -0.4, true)
+
 
     const handleClick = () => {
         myRef.current?.scrollIntoView({behavior: 'smooth'});
@@ -23,8 +27,8 @@ export const AboutMe = () => {
 
     return (
 
-        <div  className="aboutMeWrapper">
-            <div className={` aboutMe mx-4  `} >
+        <div ref={aboutMeWrapper}  className="aboutMeWrapper section">
+            <div ref={displayRef} className={` aboutMe mx-4  `} >
 
                     <h1  className="sectionTitle">About me</h1>
 

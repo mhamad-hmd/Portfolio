@@ -1,27 +1,31 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import Typed from 'typed.js';
 import './greeting.scss'
 import myImg from '../../assets/myImg.png'
-import { Parallax, ParallaxLayer } from '@react-spring/parallax';
+import { myParallax } from '../../myParallax/myParallax';
+import { useInView } from 'react-intersection-observer';
 
 
 
 export const Greeting = () => {
 
-
-
-
   // Create reference to store the DOM element containing the animation
   const el: any = React.useRef(null);
   // Create reference to store the Typed instance itself
   const typed: any = React.useRef(null);
+  const { ref: displayRef, inView: myElementIsVisible } = useInView();
 
+  
+  const imageRef = useRef<HTMLImageElement>(null)
+  const greetingBox = useRef<HTMLDivElement>(null)
+  
+  
   React.useEffect(() => {
     const options = {
       strings: [`Hello, I'm Mohamad Hammoud`, `I'am a Web Developer`],
       typeSpeed: 60,
       backSpeed: 40,
-
+      
     };
 
     // elRef refers to the <span> rendered below
@@ -33,12 +37,15 @@ export const Greeting = () => {
       typed.current.destroy();
     }
   }, [])
+  
+  myParallax(imageRef, -.3, myElementIsVisible)
+  myParallax(greetingBox, .3, myElementIsVisible)
 
   return (
 
-    <div className="heroContainer max-w-7xl flex justify-between m-auto items-center">
+    <div ref={displayRef} className="heroContainer max-w-7xl flex justify-between m-auto items-center">
 
-      <div className="greetingBox flex flex-col items-start justify-center gap-12 h-screen  ">
+      <div ref={greetingBox} className="greetingBox flex flex-col items-start justify-center gap-12 h-screen  ">
 
         <h1 className='md:text-6xl sm:text-4xl xs:text-3xl'><span className='autoType' ref={el}></span></h1>
         <p className='md:text-base xs:text-sm'>Feel free to reach out if you need help in making a website for you or your business</p>
@@ -61,7 +68,7 @@ export const Greeting = () => {
 
       </div>
 
-      <img className='myImg mb-4 mr-20' src={myImg} alt="" />
+      <img ref={imageRef} className='myImg mb-4 mr-20' src={myImg} alt="" />
 
     </div>
 
