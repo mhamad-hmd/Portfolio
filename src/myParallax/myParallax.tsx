@@ -7,7 +7,6 @@ export const myParallax = (element: any , scrollSpeed: number, visible: boolean)
 
     const handleScroll = () => setOffSetY( element.current.getBoundingClientRect().top)
     useEffect(() => {
-        console.log(element.current.getBoundingClientRect().top)
         
         if(visible) {
             element.current.style.transform = `translateY(${offsetY * scrollSpeed}px)`
