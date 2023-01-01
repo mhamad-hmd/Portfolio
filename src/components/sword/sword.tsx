@@ -16,20 +16,16 @@ const swordTarget = (e:any) => {
     let radianDegrees = Math.atan2(e.clientX - mouseX, e.clientY - mouseY);
     let rotationDegrees = radianDegrees * (180 / Math.PI) * -1 - 10;
     setSwordRotation(rotationDegrees)
-    sword.current!.style.transform = `translate(0px, 0px)  rotate(${rotationDegrees}deg)`;
+    sword.current!.style.transform = `rotate(${rotationDegrees}deg)`
 }
 
 const swordAttack = (e:any) => {
-    window!.removeEventListener("mousemove", (e) => swordTarget(e) );
-    console.log(e.pageY, e.pageX)
-    sword.current!.style.transform = `translate(${e.pageX}px, ${e.pageY}px) rotate(${swordRotation}deg)`
-    setTimeout(() => {
-        sword.current!.style.transform = `translate(0px, 0px) rotate(${swordRotation}deg)`
-        window!.addEventListener("mousemove", (e) => swordTarget(e) );
-    }, 2000)
-    // setTimeout(() => {
-    //     window!.addEventListener("mousemove", (e) => swordTarget(e) );
-    // }, 3000)
+    console.log(e.y, e.x, e)
+    sword.current!.style.translate = `${e.x}px ${e.y - 200}px`
+    const resetSword = setTimeout(() => {
+        sword.current!.style.translate = `50vw`
+    }, 2000) 
+    
 
 }
 
@@ -44,6 +40,7 @@ useEffect(() => {
 
 
   return (
+
         <img ref={sword} className='sword' src={swordImg} alt="" />
   )
 }   
