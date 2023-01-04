@@ -1,7 +1,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
-import { myParallax } from '../../myParallax/myParallax';
+import { myParallax } from '../myParallax/myParallax';
 import './projectConstructor.scss'
 
 type props = {

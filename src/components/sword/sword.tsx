@@ -13,7 +13,7 @@ const Sword = () => {
     const [swordRotation, setSwordRotation] = useState(Number)
     let rotationDegrees = 0
 
-    const swordTarget = (e: any, element) => {
+    const swordTarget = (e: any, element:any) => {
         let mouseX = element.current!.getBoundingClientRect().right;
         let mouseY = element.current!.getBoundingClientRect().top;
         let radianDegrees = Math.atan2(e.clientX - mouseX, e.clientY - mouseY);

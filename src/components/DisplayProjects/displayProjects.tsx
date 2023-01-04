@@ -8,7 +8,7 @@ import './displayProjects.scss';
 import { useEffect, useRef } from 'react';
 import { scrollIntoView } from '../scrollIntoView/scrollIntoview';
 import { useInView } from 'react-intersection-observer';
-import { myParallax } from '../../myParallax/myParallax';
+import { myParallax } from '../myParallax/myParallax';
 
 
 

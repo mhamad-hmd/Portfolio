@@ -3,7 +3,7 @@ import { useEffect, useRef } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { scrollIntoView } from '../scrollIntoView/scrollIntoview';
 import './aboutMe.scss'
-import { myParallax } from '../../myParallax/myParallax';
+import { myParallax } from '../myParallax/myParallax';
 
 export const AboutMe = () => {
 

@@ -1,6 +1,6 @@
-$pageClr: #4B4E53;
-$scndryClr: #F6F3F0;
-$third: #000;
+$pageClr: #000;
+$scndryClr: #B90000;
+$third: #fff;
 
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@200;300;400;500;600;700;800;900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
 
@@ -15,9 +15,9 @@ p,span{
 }
 
 .btnA {
-  background: $third;
-  -webkit-text-fill-color: $scndryClr;
-  border-color: $third !important;
+  background: $scndryClr;
+  -webkit-text-fill-color: $pageClr;
+  border-color: $scndryClr !important;
   position: relative;
   font-weight: 600;
   transition: 0.7s;
@@ -30,8 +30,9 @@ p,span{
 .btnB {
   background: transparent;
   background-clip: text;
-  -webkit-text-fill-color: #fff;
+  -webkit-text-fill-color: $scndryClr;
   position: relative;
+  border-color: $scndryClr;
   font-weight: 600;
 }
 
@@ -54,7 +55,7 @@ p,span{
   .btn {
     display: inline-block;
     border-radius: 10px;
-    border: 2px solid $third;
+    border: 2px solid $scndryClr;
     padding: 7px 17px;
     font-size: 20px;
   }

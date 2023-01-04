@@ -1,7 +1,7 @@
 
 import { useRef } from 'react';
 import { useInView } from 'react-intersection-observer';
-import { myParallax } from '../../myParallax/myParallax';
+import { myParallax } from '../myParallax/myParallax';
 import { scrollIntoView } from '../scrollIntoView/scrollIntoview';
 import './contactMe.scss';
 

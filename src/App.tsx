@@ -9,6 +9,8 @@ import { SuccessPage } from './components/successPage/successPage';
 import { SocialMedia } from './components/socialMedia/socialMedia'
 import { useEffect, useRef, useState } from 'react'
 import Sword from './components/sword/sword'
+import UchihaEyes from './components/uchihaEyes/UchihaEyes'
+import Space from './components/Space/Space'
 
 
 function App() {
@@ -21,14 +23,16 @@ function App() {
     <Router>
       <div className="App">
 
-    
+
         <Routes>
 
           <Route path="/" element={
             <div>
-              <Sword/>
+              <UchihaEyes />
 
               <Greeting />
+
+              <Space />
 
               <DisplayProjects />
 
