@@ -9,14 +9,18 @@
     margin-left: -60px;
     margin-top: 0px;
     transform-origin: top;
-    z-index: 2;
+    z-index: 999;
     height: 252px;
     translate: 50vw;
+    scale: 0;
+    transition: translate 1s ease-in, scale .3s ease;
 }
 
-.swordActive{
-    transition: all .1s ease-in;
+.swordAttack{
+    scale: 1;
+    translate: 50vw 200%;
 }
+
 
 // .swordMedia, .swordEffect{
     //     width: 100px;

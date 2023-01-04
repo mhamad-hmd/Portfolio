@@ -1,3 +1,6 @@
+$pageClr: #000;
+$scndryClr: #B90000;
+$third: #fff;
 
 .eyesContainer{
     position: fixed;
@@ -6,6 +9,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 0;
 
 }
 
@@ -18,7 +22,7 @@
 
 
 .rightEyeContainer{
-    clip-path: polygon(54% 10%, 100% 0, 89% 70%, 60% 90%, 0 99%, 5% 69%, 25% 37%);
+    clip-path: polygon(54% 10%, 100% 0, 89% 70%, 60% 90%, 0 99%, 10% 68%, 25% 40%);
 }
 .leftEyeContainer{
     clip-path: polygon(34% 4%, 62% 24%, 86% 59%, 100% 100%, 44% 94%, 0 57%, 0 0);
@@ -28,4 +32,8 @@
 .sharinganWrapper{
     position: absolute;
     width: 180px;
+}
+
+.sharingan{
+    width: 82px;
 }

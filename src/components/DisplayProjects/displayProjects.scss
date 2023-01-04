@@ -1,14 +1,23 @@
 
-$pageClr: #515152;
-$scndryClr: #08fdd8;
+$pageClr: #000;
+$scndryClr: #B90000;
+$third: #fff;
+
 
 .sectionWrapper{
     color: #fff;
     max-width: 72rem;
+    z-index: 1;
+    overflow: hidden;
 }
 
 .workWrapper{
-    height: fit-content;
+    min-height: 100vh;
+}
+
+.projectsWrapper{
+    transition: all .5s ease;
+    flex-wrap: nowrap;
 }
 
 
@@ -17,6 +26,12 @@ $scndryClr: #08fdd8;
     opacity: 1;
     transition: all 1.5s ease;
     visibility: visible;
+}
+
+.catigoryTitle{
+    font-size: 3rem;
+    color: $scndryClr;
+    font-weight: 600;
 }
 
 .offWorkLeft{

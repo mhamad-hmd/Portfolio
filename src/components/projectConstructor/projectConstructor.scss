@@ -6,14 +6,18 @@ $third: #000;
     border-radius: 6px;
     max-width: 100%;
     flex-basis: 50%;
-    max-width: 600px;
-    height: 400px; /* [1.1] Set it as per your need */
+    max-width: 450px;
+    height: 350px; /* [1.1] Set it as per your need */
     overflow: hidden;
     transform-origin: 50% 100%;
     transition: all ease;
     filter: brightness(70%);
     object-fit: cover;
     transform: scale(1.2) translateY(0%);
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-drag: none;
+    
 }
 
 .InfoContainer{

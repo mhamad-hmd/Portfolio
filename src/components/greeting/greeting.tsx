@@ -38,8 +38,8 @@ export const Greeting = () => {
     }
   }, [])
   
-  // myParallax(imageRef, -.3, myElementIsVisible)
-  // myParallax(greetingBox, .3, myElementIsVisible)
+  myParallax(imageRef, -.3, myElementIsVisible)
+  myParallax(greetingBox, .1, myElementIsVisible)
 
   return (
 

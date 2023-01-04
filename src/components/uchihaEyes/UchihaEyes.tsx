@@ -23,8 +23,8 @@ const UchihaEyes = () => {
     // }
 
     const cursorTarget = (e: any, element:any) => {
-        let mouseX = element.current!.getBoundingClientRect().right;
-        let mouseY = element.current!.getBoundingClientRect().top;
+        let mouseX = element.current!.getBoundingClientRect().left + element.current!.clientWidth / 2;
+        let mouseY = element.current!.getBoundingClientRect().top + element.current!.clientHeight / 2;
         let radianDegrees = Math.atan2(e.clientX - mouseX, e.clientY - mouseY);
         let rotationDegrees = radianDegrees * (180 / Math.PI) * -1 + 270;
         element.current!.style.transform = `rotate(${rotationDegrees}deg)`
@@ -47,10 +47,10 @@ const UchihaEyes = () => {
     //   }
 
     useEffect(() => {
-        window.addEventListener('mousemove', (e) => cursorTarget(e, sharinganLeft))
-        window.addEventListener('mousemove', (e) => cursorTarget(e, sharinganRight))
-        window.addEventListener('scroll', (e) => sharinganScroll(sharinganBallRight))
-        window.addEventListener('scroll', (e) => sharinganScroll(sharinganBallLeft))
+        document.addEventListener('mousemove', (e) => cursorTarget(e, sharinganLeft))
+        document.addEventListener('mousemove', (e) => cursorTarget(e, sharinganRight))
+        document.addEventListener('scroll', (e) => sharinganScroll(sharinganBallRight))
+        document.addEventListener('scroll', (e) => sharinganScroll(sharinganBallLeft))
     }, [])
 
     return (

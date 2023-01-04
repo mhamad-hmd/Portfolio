@@ -22,26 +22,16 @@ const Sword = () => {
     }
     
     const swordAttack = (e: any) => {
-        sword.current!.style.translate = `${e.x + 50}px ${e.y - 130 }px`
-        swordEffect.current!.style.height = `${e.y +200}px`
-        sword.current!.classList.add('swordActive')
-        swordEffect.current!.classList.add('effectActive')
-        setTimeout(() => {
-            swordEffect.current!.classList.remove('effectActive')
-            swordEffect.current!.style.height = `252px`
-        }, 500)
-
+        sword.current!.classList.add('swordAttack')
         const resetSword = setTimeout(() => {
-            sword.current!.style.translate = `50vw`
+            sword.current!.classList.remove('swordAttack')
             // swordEffect.current!.style.translate = `50vw 200px`
-        }, 2000)
+        }, 4000)
 
 
     }
 
     useEffect(() => {
-        window!.addEventListener("mousemove", (e) => swordTarget(e, sword));
-        window!.addEventListener("mousemove", (e) => swordTarget(e, swordEffect));
 
         window.addEventListener('click', (e) => swordAttack(e))
 
@@ -53,12 +43,11 @@ const Sword = () => {
 
 
     return (
-        <>
+
             <div className='swordMedia sword' ref={sword}>
                 <img src={swordImg} alt="" />
             </div>
-            <img ref={swordEffect} className="swordEffect" src={polyGon} alt="" />
-        </>
+            // {/* <img ref={swordEffect} className="swordEffect" src={polyGon} alt="" /> */}
     )
 }
 

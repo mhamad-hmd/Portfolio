@@ -2,13 +2,13 @@
 import { useEffect, useRef, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { myParallax } from '../myParallax/myParallax';
+import royalCoats from '../../assets/royal-coats.png'
 import './projectConstructor.scss'
 
 type props = {
     title: string,
     typeOfwork: string,
     password: string,
-    tools: string,
     imgPath: string,
     projectUrl: string,
     index: string,
@@ -18,14 +18,14 @@ type props = {
 }
 
 export const ProjectConstructor = (props: props) => {
-
     const { title, typeOfwork, password, imgPath, projectUrl, index, even, scrollSpeed } = props;
     const previewImg = useRef<HTMLImageElement>(null);
     const infoContainer = useRef<HTMLDivElement>(null);
     const previewImgPosition = previewImg.current?.getBoundingClientRect().top!;
     const { ref: displayRef, inView: myElementIsVisible } = useInView();
-    myParallax(previewImg, scrollSpeed, myElementIsVisible)
-    myParallax(infoContainer, scrollSpeed, myElementIsVisible)
+    
+    // myParallax(previewImg, scrollSpeed, myElementIsVisible)
+    // myParallax(infoContainer, scrollSpeed, myElementIsVisible)
 
     let previewTranslate = 0;
     let infoTranslate = 0;
@@ -58,15 +58,14 @@ export const ProjectConstructor = (props: props) => {
 
  document.getElementById('previewImg')?.getBoundingClientRect
 
-
     return (
         <div ref={displayRef}  className={`projectWrapper flex  gap-8  m-auto pb-3  ${even ? "flex-row" : "flex-row-reverse"}`} >
 
             <div className='previewImgContainer'>
-                <img ref={previewImg} id="previewImg" className='previewImg' src={imgPath} alt="" />
+                <img ref={previewImg} id="previewImg" className='previewImg' src={imgPath} alt="" aria-disabled />
             </div>
 
-            <div ref={infoContainer} className={`InfoContainer flex flex-col justify-between items-between gap-4 mt-4  ${even ? "items-start" : "items-end"}`}>
+            <div ref={infoContainer} className={`InfoContainer flex flex-col justify-between items-between gap-4 mt-4  ${even ? "items-start" : "items-end"} hidden`}>
                 <span>{index}</span>
                 <h1 className='projectTitle'>{title}</h1>
 

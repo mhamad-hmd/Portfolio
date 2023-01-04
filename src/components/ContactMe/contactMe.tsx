@@ -14,14 +14,12 @@ export const ContactMe = () => {
     const contactMeRef = useRef<null | HTMLDivElement>(null)
 
 
-    const handleClick = () => {
-        myRef.current?.scrollIntoView({ behavior: 'smooth' });
-    };
+   
 
     const contactMeBtn = 'contactMe'
 
-    scrollIntoView(contactMeBtn, handleClick)
-    myParallax(contactMeRef, 0.3, true)
+    scrollIntoView(myRef.current, contactMeBtn)
+    // myParallax(contactMeRef, 0.3, true)
 
     return (
         <div ref={contactMeRef}   className='contactWrapper section'>
