@@ -6,9 +6,10 @@ $third: #fff;
 
 .sectionWrapper{
     color: #fff;
-    max-width: 72rem;
     z-index: 1;
     overflow: hidden;
+    width: 72rem;
+    height: 72rem;
 }
 
 .workWrapper{
@@ -16,15 +17,15 @@ $third: #fff;
 }
 
 .projectsWrapper{
-    transition: all .5s ease;
+    transition: all 1s ease;
     flex-wrap: nowrap;
+    min-height: 300px;
 }
 
 
 .viewWork{
     transform:translateX(0);
     opacity: 1;
-    transition: all 1.5s ease;
     visibility: visible;
 }
 
@@ -37,7 +38,7 @@ $third: #fff;
 .offWorkLeft{
     top: 0;
     left: 0;
-    transform: translateX(-100vw);
+    transform: translateX(-100vw) !important;
     opacity: 0;
     transition: 0;
     visibility: hidden;

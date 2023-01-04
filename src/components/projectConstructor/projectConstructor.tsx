@@ -15,13 +15,13 @@ type props = {
     even: boolean,
     myParallaxView:boolean,
     scrollSpeed: number,
+    mainProject: string
 }
 
 export const ProjectConstructor = (props: props) => {
-    const { title, typeOfwork, password, imgPath, projectUrl, index, even, scrollSpeed } = props;
+    const { title, typeOfwork, password, imgPath, projectUrl, index, even, scrollSpeed, mainProject } = props;
     const previewImg = useRef<HTMLImageElement>(null);
     const infoContainer = useRef<HTMLDivElement>(null);
-    const previewImgPosition = previewImg.current?.getBoundingClientRect().top!;
     const { ref: displayRef, inView: myElementIsVisible } = useInView();
     
     // myParallax(previewImg, scrollSpeed, myElementIsVisible)
@@ -59,13 +59,13 @@ export const ProjectConstructor = (props: props) => {
  document.getElementById('previewImg')?.getBoundingClientRect
 
     return (
-        <div ref={displayRef}  className={`projectWrapper flex  gap-8  m-auto pb-3  ${even ? "flex-row" : "flex-row-reverse"}`} >
+        <div ref={displayRef}  className={`projectWrapper flex  gap-8  m-auto pb-3  ${even ? "flex-row" : "flex-row-reverse"} ${mainProject? "mainTranslate" : ""}`} >
 
             <div className='previewImgContainer'>
                 <img ref={previewImg} id="previewImg" className='previewImg' src={imgPath} alt="" aria-disabled />
             </div>
 
-            <div ref={infoContainer} className={`InfoContainer flex flex-col justify-between items-between gap-4 mt-4  ${even ? "items-start" : "items-end"} hidden`}>
+            <div ref={infoContainer} className={`InfoContainer flex flex-col justify-between items-between gap-4 mt-4  ${even ? "items-start" : "items-end"} ${mainProject? "visible" : "hidden"}`}>
                 <span>{index}</span>
                 <h1 className='projectTitle'>{title}</h1>
 
