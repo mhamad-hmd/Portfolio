@@ -1,59 +1,81 @@
-
 $pageClr: #000;
-$scndryClr: #B90000;
+$scndryClr: #b90000;
 $third: #fff;
 
-
-.sectionWrapper{
+.sectionWrapper {
     color: #fff;
     z-index: 1;
     overflow: hidden;
     width: 72rem;
-    height: 72rem;
+    height: 50rem;
 }
 
-.workWrapper{
-    min-height: 100vh;
-}
-
-.projectsWrapper{
+.projectsWrapper {
+    position: relative;
     transition: all 1s ease;
     flex-wrap: nowrap;
     min-height: 300px;
-}
-
-
-.viewWork{
-    transform:translateX(0);
+    transform: translateX(0);
     opacity: 1;
     visibility: visible;
+    scale: 1;
 }
 
-.catigoryTitle{
+.catigoryTitle {
     font-size: 3rem;
     color: $scndryClr;
-    font-weight: 600;
+    font-weight: 700;
+    transition: all 0.5s ease;
+    z-index: 10;
+    scale: 1;
 }
 
-.offWorkLeft{
+.catigoryTitle:nth-child(2) {
+    transition-delay: 30ms;
+}
+.catigoryTitle:nth-child(3) {
+    transition-delay: 50ms;
+}
+
+.navCenter {
+    translate: 150% 200%;
+    scale: 1.3;
+}
+.navCenter2 {
+    translate: 150% 200%;
+    scale: 1.3;
+}
+.navCenter3 {
+    translate: 700% 200%;
+    scale: 1.3;
+}
+
+.workRefresh {
     top: 0;
     left: 0;
-    transform: translateX(-100vw) !important;
+    transform: translateX(-70vw) !important;
     opacity: 0;
     transition: 0;
     visibility: hidden;
+    transition: none;
+    scale: 0.9;
 }
 
-.offWorkRight{
-    top: 0;
+.projectsArrow {
+    position: absolute;
+    z-index: 20;
+    top: 50%;
+    transition: all 0.3s ease;
+}
+.projectsArrowLeft {
     left: 0;
-    transform: translateX(100vw);
-    opacity: 0;
-    transition: 0;
-    visibility: hidden;
 }
 
-.offWorkTop{
+.projectsArrowRight {
+    right: 0;
+}
+
+.offWorkTop {
     top: 0;
     left: 0;
     transform: translateY(-100vw);
@@ -62,17 +84,36 @@ $third: #fff;
     visibility: hidden;
 }
 
+.categoriesWrapper {
+    padding-left: 2em;
+}
 
+@media (max-width: 1028px) {
+    .sectionWrapper {
+        width: 55rem;
+    }
 
-@media (max-width:600px){
-    .viewWork{
+    .catigoryTitle {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .sectionWrapper {
+        width: 48rem;
+    }
+
+    .catigoryTitle {
+        font-size: 2.2rem;
+    }
+    .viewWork {
         margin: 0;
         opacity: 1;
         transition: 1s;
         visibility: visible;
     }
-    
-    .offWork{
+
+    .offWork {
         left: 0;
         margin-left: -300px;
         opacity: 0;
@@ -80,14 +121,18 @@ $third: #fff;
         visibility: hidden;
     }
 
-    .sectionWrapper{
-        max-width: 19rem;
+    .categoriesWrapper {
+        text-align: center;
+        padding-left: 0em;
     }
-    
 }
 
-// .sectionTitle{
-//     transition: 0.3 ease;
-// }
-
-
+@media (max-width: 425px) {
+    .sectionWrapper {
+        width: 22rem;
+    }
+    .catigoryTitle {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+}

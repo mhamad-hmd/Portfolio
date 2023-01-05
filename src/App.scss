@@ -5,7 +5,7 @@ $third: #fff;
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@200;300;400;500;600;700;800;900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
 
 
-h1, h2, h3, .mainFont{
+h1, h2, h3, .mainFont, .btn{
   font-family: 'League Spartan', sans-serif;
 }
 
@@ -16,18 +16,46 @@ p,span{
   color: #CDCACA;
 }
 
+
 .btnA {
   background: $scndryClr;
   -webkit-text-fill-color: $pageClr;
-  border-color: $scndryClr !important;
+  border-color: $pageClr;
   position: relative;
   font-weight: 600;
-  transition: 0.7s;
+  transition: all 0.7s ese;
+  overflow: hidden;
+  
 }
 
+.btnA:hover{
+  -webkit-text-fill-color: $scndryClr;
+}
 
+.btnA:hover::after{
+  width: 250px;
+  height: 250px;
+}
 
+.btnA span{
+  z-index: 10;
+  position: relative;
+  transition: all 1s ease;
+  font-weight: 500 !important;
+}
 
+.btnA::after {
+  content: '';
+  position: absolute;
+  background-color: $pageClr;
+  width: 100px;
+  height: 100px;
+  transition: all 1s ease;
+  border-radius: 50%;
+  left: -60%;
+  z-index: 1;
+
+}
 
 .btnB {
   background: transparent;
@@ -58,7 +86,7 @@ p,span{
     display: inline-block;
     border-radius: 10px;
     border: 2px solid $scndryClr;
-    padding: 7px 17px;
+    padding: 7px 20px;
     font-size: 20px;
   }
 }

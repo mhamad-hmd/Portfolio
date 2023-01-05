@@ -27,39 +27,9 @@ export const ProjectConstructor = (props: props) => {
     // myParallax(previewImg, scrollSpeed, myElementIsVisible)
     // myParallax(infoContainer, scrollSpeed, myElementIsVisible)
 
-    let previewTranslate = 0;
-    let infoTranslate = 0;
-    let previewScale = 1.2;
-    let lastScrollTop = 0;
-
     
-
-    // previewImgPosition && parallax.current.container.current!.addEventListener('scroll', (e: any) => {
-    //     if (previewImgPosition - window.scrollY < 830 && previewImgPosition - window.scrollY > -630) {
-    //         const st = window.pageYOffset
-    //         if (st > lastScrollTop) {
-    //             previewTranslate += .099
-    //             infoTranslate += .03
-    //             previewImg.current!.style.transform = `scale(${previewScale}) translateY(${previewTranslate}%)`
-    //             infoContainer.current!.style.transform = `translateY(${infoTranslate}%)`
-    //         } else if (st < lastScrollTop) {
-    //             previewTranslate -= .09
-    //             infoTranslate -= .03
-    //             previewImg.current!.style.transform = `scale(${previewScale}) translateY(${previewTranslate}%)`
-    //             infoContainer.current!.style.transform = `translateY(${infoTranslate}%)`
-    //             console.log('up')
-    //         }
-
-    //         lastScrollTop = st <= 0 ? 0 : st
-    //     }
-
-
-    // })
-
- document.getElementById('previewImg')?.getBoundingClientRect
-
     return (
-        <div ref={displayRef}  className={`projectWrapper flex  gap-8  m-auto pb-3  ${even ? "flex-row" : "flex-row-reverse"} ${mainProject? "mainTranslate" : ""}`} >
+        <div ref={displayRef}  className={`projectWrapper flex  gap-8  m-auto pb-3 xs:flex-col xs:m-auto ${even ? "md:flex-row" : "md:flex-row-reverse"} ${mainProject? "mainTranslate" : ""}`} >
 
             <div className='previewImgContainer'>
                 <img ref={previewImg} id="previewImg" className='previewImg' src={imgPath} alt="" aria-disabled />
@@ -80,7 +50,9 @@ export const ProjectConstructor = (props: props) => {
 
                 <a href={projectUrl} className="w-full text-center mt-5 mb-2">
                     <button id='projectBtn' className='btn btnA m-auto text-center '>
-                        Preview
+                        <span className='mainFont'>
+                            Preview
+                        </span>
                     </button>
                 </a>
             </div>

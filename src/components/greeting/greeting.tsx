@@ -15,17 +15,17 @@ export const Greeting = () => {
   const typed: any = React.useRef(null);
   const { ref: displayRef, inView: myElementIsVisible } = useInView();
 
-  
+
   const imageRef = useRef<HTMLImageElement>(null)
   const greetingBox = useRef<HTMLDivElement>(null)
-  
-  
+
+
   React.useEffect(() => {
     const options = {
       strings: [`Hello, I'm Mohamad Hammoud`, `I'am a Web Developer`],
       typeSpeed: 60,
       backSpeed: 40,
-      
+
     };
 
     // elRef refers to the <span> rendered below
@@ -37,7 +37,7 @@ export const Greeting = () => {
       typed.current.destroy();
     }
   }, [])
-  
+
   myParallax(imageRef, -.3, myElementIsVisible)
   myParallax(greetingBox, .1, myElementIsVisible)
 
@@ -59,7 +59,11 @@ export const Greeting = () => {
           </div>
 
           <div className='btnDiv'>
-            <button id='aboutMe' className='btn btnA'>About Me</button>
+            <button id='aboutMe' className='btn btnA'>
+              <span className='mainFont'>
+                About Me
+              </span>
+            </button>
           </div>
 
           <div className='btnDiv'>

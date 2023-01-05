@@ -6,7 +6,7 @@ export const scrollIntoView = (section:any, button:string) => {
 
     const handleClick = () => {
         setTimeout(() => {
-            section!.scrollIntoView({ behavior: 'smooth' });
+            section?.scrollIntoView({ behavior: 'smooth' });
         }, 1000)
     };
 
