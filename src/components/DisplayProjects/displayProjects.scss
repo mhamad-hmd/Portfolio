@@ -6,12 +6,15 @@ $third: #fff;
     color: #fff;
     z-index: 1;
     overflow: hidden;
-    width: 72rem;
+    width: 100%;
     height: 50rem;
+    max-width: 1280px;
 }
 
 .projectsWrapper {
     position: relative;
+    gap: 2em;
+    width: 100%;
     transition: all 1s ease;
     flex-wrap: nowrap;
     min-height: 300px;
@@ -28,6 +31,7 @@ $third: #fff;
     transition: all 0.5s ease;
     z-index: 10;
     scale: 1;
+    cursor: pointer;
 }
 
 .catigoryTitle:nth-child(2) {
@@ -49,6 +53,7 @@ $third: #fff;
     translate: 700% 200%;
     scale: 1.3;
 }
+
 
 .workRefresh {
     top: 0;
@@ -84,14 +89,19 @@ $third: #fff;
     visibility: hidden;
 }
 
+.projectCardWrapper{
+    flex-basis: 33.3%;
+    flex-grow: 1;
+    overflow: hidden;
+    min-width: 33.3%;
+}
+
 .categoriesWrapper {
     padding-left: 2em;
 }
 
 @media (max-width: 1028px) {
-    .sectionWrapper {
-        width: 55rem;
-    }
+   
 
     .catigoryTitle {
         font-size: 2.5rem;
@@ -99,10 +109,11 @@ $third: #fff;
 }
 
 @media (max-width: 768px) {
-    .sectionWrapper {
-        width: 48rem;
+   
+    .projectCardWrapper{
+        flex-basis: 50%;
+        min-width: 50%;
     }
-
     .catigoryTitle {
         font-size: 2.2rem;
     }
@@ -128,9 +139,11 @@ $third: #fff;
 }
 
 @media (max-width: 425px) {
-    .sectionWrapper {
-        width: 22rem;
+    .projectCardWrapper{
+        flex-basis: 100%;
+        min-width: 100%;
     }
+    
     .catigoryTitle {
         font-size: 1.8rem;
         text-align: center;

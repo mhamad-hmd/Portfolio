@@ -84,6 +84,7 @@ $third: #000;
 
 
 @media (min-width: 768px) {
+
     .projectTitle {
         font-size: 32px;
     }
@@ -123,8 +124,8 @@ $third: #000;
     .previewImg {
         border-radius: 6px;
         max-width: 100%;
-        max-width: 350px;
-        height: 250px;
+        max-width: 450px;
+        height: 350px;
     }
     .projectTitle {
         font-size: 20px;
@@ -142,11 +143,11 @@ $third: #000;
 }
 
 
-@media (max-width: 425px) {
+@media (max-width: 500px) {
 
     .InfoContainer, .aboutIt{
         h1{
-            font-size:1 rem;
+            font-size: 1rem;
             font-weight: 500;
         }
         h2{
@@ -166,7 +167,14 @@ $third: #000;
             font-weight: 300;
         }
     }
+    .previewImg {
+        border-radius: 6px;
+        max-width: 100%;
+        max-width: 450px;
+        height: 350px;
+    }
 }
+
 .scndCol{
     overflow-y: hidden;
 }
