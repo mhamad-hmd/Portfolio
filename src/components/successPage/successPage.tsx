@@ -10,7 +10,9 @@ export const SuccessPage = () => {
                 <h1 className="sectionTitle">Success!!</h1>
                 <p className="successP">I will reach out to you very soon</p>
                 <a className='m-auto' href="/">
-                    <button className='btn btnB w-fit m-auto mt-5' >Go Back?</button>
+                    <button className='btn btnB w-fit m-auto mt-5' >
+                         <span>Go Back?</span>
+                    </button>
                 </a>
             </div>
         </div>

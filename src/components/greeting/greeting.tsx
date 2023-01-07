@@ -55,7 +55,9 @@ export const Greeting = () => {
 
         <div className='flex justify-center flex-wrap gap-8'>
           <div className='btnDiv'>
-            <button id='myWork' className='btn btnB'  >My Work</button>
+            <button id='myWork' className='btn btnB'  >
+              <span>My Work</span> 
+              </button>
           </div>
 
           <div className='btnDiv'>
@@ -67,7 +69,9 @@ export const Greeting = () => {
           </div>
 
           <div className='btnDiv'>
-            <button id='contactMe' className='btn btnB'>Contact Me</button>
+            <button id='contactMe' className='btn btnB'>
+              <span>Contact Me</span>
+              </button>
           </div>
 
 

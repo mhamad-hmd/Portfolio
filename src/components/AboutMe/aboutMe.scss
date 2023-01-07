@@ -1,7 +1,12 @@
-$pageClr: #515152;
-$scndryClr: #08fdd8;
+$pageClr: #000;
+$scndryClr: #b90000;
+$third: #fff;
 
 
+.aboutMeWrapper{
+    position: relative;
+    z-index: 20;
+}
 
 .myInfoWrapper {
     color: #fff;
@@ -10,7 +15,6 @@ $scndryClr: #08fdd8;
     margin: auto;
     font-size: 20px;
     line-height: 35px;
-    
 }
 
 

@@ -5,7 +5,7 @@ $third: #fff;
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@200;300;400;500;600;700;800;900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
 
 
-h1, h2, h3, .mainFont, .btn{
+h1, h2, h3, .mainFont, .btn span{
   font-family: 'League Spartan', sans-serif;
 }
 
@@ -17,18 +17,21 @@ p,span{
 }
 
 
+.btnA span {
+  -webkit-text-fill-color: $pageClr;
+  transition: all .2s ease-in-out;
+
+}
 .btnA {
   background: $scndryClr;
-  -webkit-text-fill-color: $pageClr;
   border-color: $pageClr;
   position: relative;
   font-weight: 600;
-  transition: all 0.7s ese;
   overflow: hidden;
   
 }
 
-.btnA:hover{
+.btnA:hover span{
   -webkit-text-fill-color: $scndryClr;
 }
 
@@ -37,11 +40,20 @@ p,span{
   height: 250px;
 }
 
-.btnA span{
+.btnB:hover{
+  -webkit-text-fill-color: $pageClr;
+}
+
+.btnB:hover::after{
+  transform: translateX(100%);
+}
+
+.btnA span, .btnB span{
   z-index: 10;
   position: relative;
-  transition: all 1s ease;
+  transition: all 1s ease-in-out;
   font-weight: 500 !important;
+
 }
 
 .btnA::after {
@@ -50,7 +62,7 @@ p,span{
   background-color: $pageClr;
   width: 100px;
   height: 100px;
-  transition: all 1s ease;
+  transition: all 1s ease-in-out;
   border-radius: 50%;
   left: -60%;
   z-index: 1;
@@ -64,8 +76,22 @@ p,span{
   position: relative;
   border-color: $scndryClr;
   font-weight: 600;
+  overflow: hidden;
 }
 
+.btnB::after {
+  content: "";
+  position: absolute;
+  background-color: #B90000;
+  width: 150px;
+  height: 60px;
+  transition: all 1s ease-in-out;
+  border-radius: 50%;
+  left: -140px;
+  top: -10%;
+  z-index: 1;
+  transform-origin: center;
+}
 
 .sectionTitle {
   text-align: center;
@@ -102,6 +128,7 @@ p,span{
     border: 2px solid $scndryClr;
     padding: 5px 20px;
     font-size: 15px;
+
   }
 }
 

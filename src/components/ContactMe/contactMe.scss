@@ -1,7 +1,14 @@
 
-$pageClr: #4B4E53;
-$scndryClr: #F6F3F0;
-$third: #000;
+$pageClr: #000;
+$scndryClr: #B90000;
+$third: #fff;
+
+
+.contactWrapper{
+    z-index: 20;
+    position: relative;
+}
+
 
 .formInput{
     border-bottom: 1px solid $third  ;
@@ -19,7 +26,6 @@ $third: #000;
 .inputWrapper{
     display: grid;
 
-
 }
 
 .myInfoTitle{
@@ -28,7 +34,7 @@ $third: #000;
 }
 
 .inputLabel{
-    color: $scndryClr;
+    color: $third;
 }
 
 .formInputContainer{
