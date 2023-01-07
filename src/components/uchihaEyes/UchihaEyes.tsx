@@ -25,14 +25,21 @@ const UchihaEyes = () => {
     const cursorTarget = (e: any, elements:Array<any>) => {
         
         elements.forEach((element:any) => {
-            let mouseX = element.current!.getBoundingClientRect().left + element.current!.clientWidth / 2;
-            let mouseY = element.current!.getBoundingClientRect().top + element.current!.clientHeight / 2;
-            let radianDegrees = Math.atan2(e.clientX - mouseX, e.clientY - mouseY);
-            let rotationDegrees = radianDegrees * (180 / Math.PI) * -1 + 270;
-            
-            element.current!.style.transform = `rotate(${rotationDegrees}deg)` 
+            const x = -(window.innerWidth / 2 - e.clientX) / 13;
+            const y = -(window.innerHeight / 2 - e.clientY ) / 13;
+            console.log(window.innerHeight, window.innerWidth)
+            element.current!.style.transform = `translate(${x}px, ${y}px)`; 
         })
     }
+    //     elements.forEach((element:any) => {
+    //         let mouseX = element.current!.getBoundingClientRect().left + element.current!.clientWidth / 2;
+    //         let mouseY = element.current!.getBoundingClientRect().top + element.current!.clientHeight / 2;
+    //         let radianDegrees = Math.atan2(e.clientX - mouseX, e.clientY - mouseY);
+    //         let rotationDegrees = radianDegrees * (360 / Math.PI) * -1 + 360;
+            
+    //         element.current!.style.transform = `rotate(${rotationDegrees}deg)` 
+    //     })
+    // }
 
     const sharinganScroll = (element:any) => {
         sharinganRotate++
