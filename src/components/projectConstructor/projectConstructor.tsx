@@ -29,17 +29,17 @@ export const ProjectConstructor = (props: props) => {
 
     
     return (
-        <div ref={displayRef}  className={`projectWrapper flex  gap-8  m-auto pb-3 xs:flex-col xs:m-auto ${even ? "md:flex-row" : "md:flex-row-reverse"} ${mainProject? "mainTranslate" : ""}`} >
+        <div ref={displayRef}  className={`projectWrapper flex  gap-8  m-auto pb-3 xs:flex-col xs:m-auto w-fit ${even ? "md:flex-row" : "md:flex-row-reverse"} ${mainProject? "mainTranslate" : ""}`} >
 
             <div className='previewImgContainer'>
                 <img ref={previewImg} id="previewImg" className='previewImg' src={imgPath} alt="" aria-disabled />
             </div>
 
-            <div ref={infoContainer} className={`InfoContainer flex flex-col justify-between items-between gap-4 mt-4  ${even ? "items-start" : "items-end"} ${mainProject? "visible" : "hidden"}`}>
+            <div ref={infoContainer} className={`InfoContainer items-center flex flex-col justify-between md:items-between gap-4 mt-4  ${even ? "items-start" : "items-end"} ${mainProject? "visible" : "hidden"}`}>
                 <span>{index}</span>
                 <h1 className='projectTitle'>{title}</h1>
 
-                <div className={`aboutIt flex flex-col gap-1  ${even ? "items-start" : "items-end"}`}>
+                <div className={`aboutIt flex flex-col gap-1  xs:items-start ${even ? "md:items-start" : "md:items-end"}`}>
                     <h2>Info:</h2>
                     <h4 className='typeOfWork'>{typeOfwork}</h4>
                     {password.length > 0 &&

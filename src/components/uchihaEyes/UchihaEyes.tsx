@@ -22,12 +22,15 @@ const UchihaEyes = () => {
     //     element.current!.style.transform = "rotate(" + rotate + "deg)";
     // }
 
-    const cursorTarget = (e: any, element:any) => {
-        let mouseX = element.current!.getBoundingClientRect().left + element.current!.clientWidth / 2;
-        let mouseY = element.current!.getBoundingClientRect().top + element.current!.clientHeight / 2;
-        let radianDegrees = Math.atan2(e.clientX - mouseX, e.clientY - mouseY);
-        let rotationDegrees = radianDegrees * (180 / Math.PI) * -1 + 270;
-        element.current!.style.transform = `rotate(${rotationDegrees}deg)`
+    const cursorTarget = (e: any, elements:Array<any>) => {
+        
+        elements.forEach((element:any) => {
+            let mouseX = element.current!.getBoundingClientRect().left + element.current!.clientWidth / 2;
+            let mouseY = element.current!.getBoundingClientRect().top + element.current!.clientHeight / 2;
+            let radianDegrees = Math.atan2(e.clientX - mouseX, e.clientY - mouseY);
+            let rotationDegrees = radianDegrees * (180 / Math.PI) * -1 + 270;
+            element.current!.style.transform = `rotate(${rotationDegrees}deg)`
+        })
     }
 
     const sharinganScroll = (element:any) => {
@@ -35,20 +38,9 @@ const UchihaEyes = () => {
         element.current!.style.transform = `rotate(${sharinganRotate}deg)`
     }
 
-    // function eyeball() {
-    //     eye.forEach(function (eye) {
-    //       let x = eye.getBoundingClientRect().left + eye.clientWidth / 2;
-    //       let y = eye.getBoundingClientRect().top + eye.clientHeight / 2;
-
-    //       let radian = Math.atan2(event.pageX - x, event.pageY - y);
-    //       let rotate = radian * (180 / Math.PI) * -1 + 270;
-    //       eye.style.transform = "rotate(" + rotate + "deg)";
-    //     });
-    //   }
 
     useEffect(() => {
-        document.addEventListener('mousemove', (e) => cursorTarget(e, sharinganLeft))
-        document.addEventListener('mousemove', (e) => cursorTarget(e, sharinganRight))
+        document.addEventListener('mousemove', (e) => cursorTarget(e, [sharinganLeft, sharinganRight]))
         document.addEventListener('scroll', (e) => sharinganScroll(sharinganBallRight))
         document.addEventListener('scroll', (e) => sharinganScroll(sharinganBallLeft))
     }, [])

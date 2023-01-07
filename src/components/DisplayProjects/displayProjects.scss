@@ -13,7 +13,7 @@ $third: #fff;
 
 .projectsWrapper {
     position: relative;
-    gap: 2em;
+    gap: 1em;
     width: 100%;
     transition: all 1s ease;
     flex-wrap: nowrap;
@@ -91,7 +91,6 @@ $third: #fff;
 
 .projectCardWrapper{
     flex-basis: 33.3%;
-    flex-grow: 1;
     overflow: hidden;
     min-width: 33.3%;
 }
@@ -113,6 +112,9 @@ $third: #fff;
     .projectCardWrapper{
         flex-basis: 50%;
         min-width: 50%;
+    }
+    .projectsArrow{
+        display: block  !important;
     }
     .catigoryTitle {
         font-size: 2.2rem;

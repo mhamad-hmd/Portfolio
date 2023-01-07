@@ -33,18 +33,18 @@ export const DisplayProjects = (props: any) => {
     const [TranslateSlider, setTranslateSlider] = useState(0)
     const [mainProject, setMainProject] = useState('')
     const [translateBy, setTranslateBy] = useState(0)
-
     
-    const projectWrapperChildren = projectWrapper.current! && projectWrapper.current!.children.length 
-
-    const responsiveTranslate = window.innerWidth > 1028 ? 33.3 : window.innerWidth > 425 ? 66.6 : 100
-    const maxTranslate =  100 - projectWrapperChildren * 33.3 
-
-    console.log(maxTranslate, translateBy, projectWrapperChildren)
-
+    
+    
+    const responsiveTranslate = window.innerWidth > 768 ? 33.3 : window.innerWidth > 425 ? 50 : 100
+    
+    
     const translateSlide = (direction: string) => {
+        const projectsNumber = document.querySelectorAll('.projectCardWrapper').length
+        const maxTranslate =  projectsNumber - Math.floor(100 / responsiveTranslate) 
+        console.log(maxTranslate, translateBy, projectsNumber)
         if (direction == 'right' && maxTranslate > translateBy ) {
-            setTranslateBy (translateBy + 33.3)
+            setTranslateBy (translateBy + 1)
             console.log(translateBy)
             setTranslateSlider(TranslateSlider - responsiveTranslate)
             rightArrow.current!.style.translate = "20px"
@@ -54,7 +54,7 @@ export const DisplayProjects = (props: any) => {
 
         }
         else if (direction == 'left' && TranslateSlider < 0) {
-            setTranslateBy (translateBy - 33.3)
+            setTranslateBy (translateBy - 1)
             setTranslateSlider(TranslateSlider + responsiveTranslate)
             leftArrow.current!.style.translate = "-20px"
             leftArrow.current!.ontransitionend = () => {
@@ -63,6 +63,7 @@ export const DisplayProjects = (props: any) => {
         }
         else if (direction == 'reset') {
             setTranslateSlider(0)
+            setTranslateBy (0)
         }
     }
 
@@ -111,7 +112,7 @@ export const DisplayProjects = (props: any) => {
                 </div>
 
 
-                <span ref={leftArrow} className={`projectsArrow projectsArrowLeft cursor-pointer ${category == "All" && mainProject == "" ? "visible" : "hidden"}`} onClick={() => translateSlide('left')}>
+                <span ref={leftArrow} className={`projectsArrow projectsArrowLeft cursor-pointer  ${category == "All" && mainProject == "" ? "visible" : "hidden"} `} onClick={() => translateSlide('left')}>
                     <svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M33.0312 44.698C33.5659 45.2327 34.2348 45.4874 35.0378 45.4621C35.8389 45.4388 36.5069 45.1598 37.0416 44.625C37.5763 44.0903 37.8437 43.4098 37.8437 42.5834C37.8437 41.757 37.5763 41.0764 37.0416 40.5417L34.4166 37.9167H43.8228C44.6492 37.9167 45.3298 37.6367 45.8645 37.0767C46.3992 36.5187 46.6666 35.8264 46.6666 35C46.6666 34.1737 46.3876 33.4805 45.8295 32.9205C45.2695 32.3624 44.5763 32.0834 43.7499 32.0834H34.4166L37.1145 29.3855C37.6492 28.8507 37.9049 28.1818 37.8816 27.3788C37.8563 26.5777 37.5763 25.9098 37.0416 25.375C36.5069 24.8403 35.8263 24.573 34.9999 24.573C34.1735 24.573 33.493 24.8403 32.9583 25.375L25.3749 32.9584C24.8402 33.4931 24.5728 34.1737 24.5728 35C24.5728 35.8264 24.8402 36.507 25.3749 37.0417L33.0312 44.698ZM34.9999 64.1667C30.9652 64.1667 27.1735 63.4006 23.6249 61.8684C20.0763 60.3381 16.9895 58.2605 14.3645 55.6355C11.7395 53.0105 9.66186 49.9237 8.13159 46.375C6.59936 42.8264 5.83325 39.0348 5.83325 35C5.83325 30.9653 6.59936 27.1737 8.13159 23.625C9.66186 20.0764 11.7395 16.9896 14.3645 14.3646C16.9895 11.7396 20.0763 9.66101 23.6249 8.12879C27.1735 6.59851 30.9652 5.83337 34.9999 5.83337C39.0346 5.83337 42.8263 6.59851 46.3749 8.12879C49.9235 9.66101 53.0103 11.7396 55.6353 14.3646C58.2603 16.9896 60.338 20.0764 61.8683 23.625C63.4005 27.1737 64.1666 30.9653 64.1666 35C64.1666 39.0348 63.4005 42.8264 61.8683 46.375C60.338 49.9237 58.2603 53.0105 55.6353 55.6355C53.0103 58.2605 49.9235 60.3381 46.3749 61.8684C42.8263 63.4006 39.0346 64.1667 34.9999 64.1667Z" fill="#B90000" />
                     </svg>
@@ -127,9 +128,10 @@ export const DisplayProjects = (props: any) => {
                         projectsObj.map((project: Project, i: number) => {
                             if (mainProject == "") {
                                 if (category == "Shopify") {
+
                                     return (
                                         project.projectCategory == "shopify" &&
-                                        <div className={` ${category ? 'viewWork' : 'offWorkLeft'} cursor-pointer `} onClick={() => setMainProject(project.title)}>
+                                        <div className={`projectCardWrapper ${category ? 'viewWork' : 'offWorkLeft'} cursor-pointer `} onClick={() => setMainProject(project.title)}>
                                             <ProjectConstructor mainProject={mainProject} scrollSpeed={0.2} myParallaxView={myElementIsVisible} even={i % 2 == 0 ? true : false} index={project.index} title={project.title} typeOfwork={project.typeOfwork} password={project.password} imgPath={project.imgPath} projectUrl={project.url} />
                                         </div>
                                     )
@@ -137,7 +139,7 @@ export const DisplayProjects = (props: any) => {
                                 else if (category == "Full-Stack") {
                                     return (
                                         project.projectCategory == "full-stack" &&
-                                        <div className={`  ${category ? 'viewWork' : 'offWorkLeft'} cursor-pointer`} onClick={() => setMainProject(project.title)}>
+                                        <div className={` projectCardWrapper ${category ? 'viewWork' : 'offWorkLeft'} cursor-pointer`} onClick={() => setMainProject(project.title)}>
                                             <ProjectConstructor mainProject={mainProject} scrollSpeed={0.2} myParallaxView={myElementIsVisible} even={i % 2 == 0 ? true : false} index={project.index} title={project.title} typeOfwork={project.typeOfwork} password={project.password} imgPath={project.imgPath} projectUrl={project.url} />
                                         </div>
                                     )
@@ -153,7 +155,7 @@ export const DisplayProjects = (props: any) => {
                             else {
                                 if (project.title == mainProject) {
                                     return (
-                                        <div className='  ' onClick={() => setMainProject(project.title)}>
+                                        <div className='projectCardWrapper grow ' onClick={() => setMainProject(project.title)}>
                                             <ProjectConstructor mainProject={mainProject} scrollSpeed={0.2} myParallaxView={myElementIsVisible} even={i % 2 == 0 ? true : false} index={project.index} title={project.title} typeOfwork={project.typeOfwork} password={project.password} imgPath={project.imgPath} projectUrl={project.url} />
                                         </div>
                                     )
