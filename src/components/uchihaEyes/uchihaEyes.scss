@@ -9,8 +9,6 @@ $third: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1;
-
 }
 
 .eyesWrapper{
@@ -32,8 +30,36 @@ $third: #fff;
 .sharinganWrapper{
     position: absolute;
     width: 180px;
+    transition: all 1s ease;
 }
 
 .sharingan{
     width: 82px;
+}
+
+
+@media (max-width: 768px) {
+    .eye{
+        width: 280px;
+        height: 136px;
+    }
+    .sharingan{
+        width: 69px;
+    }
+    .sharinganWrapper{
+        width: 130px;
+    }
+}
+
+@media (max-width: 425px) {
+    .eye{
+        width: 140px;
+        height: 68px;
+    }
+    .sharingan{
+        width: 41px;
+    }
+    .sharinganWrapper{
+        width: 75px;
+    }
 }

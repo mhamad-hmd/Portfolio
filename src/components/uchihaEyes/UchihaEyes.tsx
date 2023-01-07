@@ -29,7 +29,8 @@ const UchihaEyes = () => {
             let mouseY = element.current!.getBoundingClientRect().top + element.current!.clientHeight / 2;
             let radianDegrees = Math.atan2(e.clientX - mouseX, e.clientY - mouseY);
             let rotationDegrees = radianDegrees * (180 / Math.PI) * -1 + 270;
-            element.current!.style.transform = `rotate(${rotationDegrees}deg)`
+            
+            element.current!.style.transform = `rotate(${rotationDegrees}deg)` 
         })
     }
 
@@ -49,13 +50,13 @@ const UchihaEyes = () => {
         <div className='eyesContainer'>
             <div className="eyesWrapper">
                 <div className='leftEyeContainer relative / flex justify-center items-center /'>
-                    <img src={eye1} alt="" />
+                    <img className='eye leftEye' src={eye1} alt="" />
                     <div ref={sharinganLeft} className="sharinganWrapper">
                         <img ref={sharinganBallLeft}  className='sharingan' src={sharingan} alt="" />
                     </div>
                 </div>
                 <div className="rightEyeContainer relative / flex justify-center items-center /">
-                    <img src={eye2} alt="" />
+                    <img className='eye rightEye' src={eye2} alt="" />
                     <div ref={sharinganRight} className="sharinganWrapper">
                         <img ref={sharinganBallRight}  className='sharingan' src={sharingan} alt="" />
                     </div>

@@ -40,7 +40,11 @@ $third: #fff;
     
   }
 
-  
+@media (max-width: 425px) {
+  .greetingBox {
+    margin-top: 60%;
+  }
+}  
 
 
 

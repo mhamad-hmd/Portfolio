@@ -22,19 +22,17 @@ function App() {
   return (
     <Router>
       <div className="App">
+          <UchihaEyes />
 
 
         <Routes>
 
           <Route path="/" element={
-            <div>
-              <UchihaEyes />
+            <div className='mainPageContainer'>
 
               <Sword/>
 
               <Greeting />
-
-              <Space />
 
               <DisplayProjects />
 

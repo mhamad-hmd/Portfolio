@@ -9,7 +9,9 @@ h1, h2, h3, .mainFont, .btn span{
   font-family: 'League Spartan', sans-serif;
 }
 
-
+.mainPageContainer{
+  z-index: 10;
+}
 
 p,span{
   font-family: 'Libre Baskerville', serif;
@@ -23,8 +25,8 @@ p,span{
 
 }
 .btnA {
-  background: $scndryClr;
-  border-color: $pageClr;
+  background: $scndryClr !important;
+  border-color: $pageClr !important;
   position: relative;
   font-weight: 600;
   overflow: hidden;
@@ -64,7 +66,7 @@ p,span{
   height: 100px;
   transition: all 1s ease-in-out;
   border-radius: 50%;
-  left: -60%;
+  left: -70px;
   z-index: 1;
 
 }
@@ -111,7 +113,7 @@ p,span{
   .btn {
     display: inline-block;
     border-radius: 10px;
-    border: 2px solid $scndryClr;
+    border: 2px solid $scndryClr !important;
     padding: 7px 20px;
     font-size: 20px;
   }
@@ -125,7 +127,7 @@ p,span{
   .btn {
     display: inline-block;
     border-radius: 6px;
-    border: 2px solid $scndryClr;
+    border: 2px solid $scndryClr !important;
     padding: 5px 20px;
     font-size: 15px;
 

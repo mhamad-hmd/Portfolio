@@ -35,7 +35,7 @@ export const ProjectConstructor = (props: props) => {
                 <img ref={previewImg} id="previewImg" className='previewImg' src={imgPath} alt="" aria-disabled />
             </div>
 
-            <div ref={infoContainer} className={`InfoContainer items-center flex flex-col justify-between md:items-between gap-4 mt-4  ${even ? "items-start" : "items-end"} ${mainProject? "visible" : "hidden"}`}>
+            <div ref={infoContainer} className={`InfoContainer xs:items-start flex flex-col justify-between md:items-between gap-4 mt-4  ${even ? "items-start" : "items-end"} ${mainProject? "visible" : "hidden"}`}>
                 <span>{index}</span>
                 <h1 className='projectTitle'>{title}</h1>
 

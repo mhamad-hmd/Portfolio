@@ -75,7 +75,9 @@ export const ContactMe = () => {
                         </div>
                     </div>
                     <div className='flex my-2'>
-                        <button className='btn btnA m-auto' type='submit'><span className='mainFont'>Submit</span></button>
+                        <button className='btn btnA m-auto' type='submit'>
+                            <span className='mainFont'>Submit</span>
+                        </button>
                     </div>
                 </form>
             </div>

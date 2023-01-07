@@ -42,10 +42,8 @@ export const DisplayProjects = (props: any) => {
     const translateSlide = (direction: string) => {
         const projectsNumber = document.querySelectorAll('.projectCardWrapper').length
         const maxTranslate =  projectsNumber - Math.floor(100 / responsiveTranslate) 
-        console.log(maxTranslate, translateBy, projectsNumber)
         if (direction == 'right' && maxTranslate > translateBy ) {
             setTranslateBy (translateBy + 1)
-            console.log(translateBy)
             setTranslateSlider(TranslateSlider - responsiveTranslate)
             rightArrow.current!.style.translate = "20px"
             rightArrow.current!.ontransitionend = () => {
