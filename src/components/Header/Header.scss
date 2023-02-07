@@ -1,0 +1,14 @@
+@use '../../Utilities.scss' as v;
+
+
+
+.title{
+    font-family: v.$mainFont;
+    color: v.$scndryColor;
+}
+
+.role{
+    font-family: v.$mainFont;
+    color: v.$scndryColor2;
+    
+}

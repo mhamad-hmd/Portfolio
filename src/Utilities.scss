@@ -1,0 +1,21 @@
+@import url('../assets/Calming.ttf');
+@import url('../assets/Montserrat-VariableFont_wght.ttf');
+
+@font-face {
+    font-family: 'Calming';
+    src: url('./assets/Calming.ttf');
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url('./assets/Montserrat-VariableFont_wght.ttf');
+}
+
+$mainColor: #F0F0F5;
+$scndryColor: #0E2E14;
+$scndryColor2: #123D1A;
+$scndryColor3: #0D2912;
+$third: #C0C0C0; 
+
+
+$mainFont: 'Calming';
+$scndryFont: 'Montserrat'
