@@ -19,7 +19,7 @@ export default function Home ({className}:{className:string}) {
 
   return (
 
-    <div ref={displayRef} className={`heroContainer max-w-7xl relative / flex flex-col  items-center / object-top m-auto transition-all duration-500  ${className} `}>
+    <div ref={displayRef} className={`heroContainer max-w-7xl  / flex flex-col  items-center / object-top m-auto transition-all duration-500   ${className} `}>
 
       <img ref={imageRef} className='myImg  object-cover max-w-xs max-h-64' src={myImg} alt="" />
 
