@@ -1,0 +1,43 @@
+$pageClr: #4B4E53;
+$scndryClr: #F6F3F0;
+$third: #000;
+
+
+.projectWrapper {
+    transform: translate(0%);
+    transition: all .5s ease-in-out;
+}
+
+.InfoContainer{
+    transition: all .5s ease;
+}
+
+.previewContainer {
+    border-radius: 4px;
+}
+
+
+
+
+
+
+
+
+.previewContainer:hover .previewImg {
+    filter: brightness(100%);
+    transform: scale(110%);
+}
+
+.projectInfo {
+    width: 100%;
+    height: auto;
+}
+
+.mainTranslate{
+    transform: translateX(10%) !important;
+}
+
+
+
+
+
