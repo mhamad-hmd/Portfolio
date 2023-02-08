@@ -61,12 +61,17 @@ export default function DisplayProjects({ className }: { className: string }) {
     const projectsObj = projects.Projects
 
     const projectWrapper = useRef<null | HTMLDivElement>(null)
+    const projectContainer = useRef<null | HTMLDivElement>(null)
     const myRef = useRef<null | HTMLDivElement>(null)
     const projectsRef = useRef<null | HTMLDivElement>(null)
 
     const [category, setCategory] = useState('');
     const [mainProject, setMainProject] = useState('')
     const movingRef = useRef(false)
+    const transformRef = useRef(0)
+    const transformValueRef = useRef(0)
+    const initialPositionRef = useRef(0)
+    const lastPageX = useRef(0)
 
 
 
@@ -92,46 +97,45 @@ export default function DisplayProjects({ className }: { className: string }) {
 
     const gestureStart = (e: { pageX: number; }) => {
         movingRef.current = true
-        dispatch({
-            type: 'gestureStart',
-            eventX: e.pageX
-        })
+        initialPositionRef.current = e.pageX
 
-        const transformMatrix = parseInt(projectWrapper.current!.style.transform.split("(")[1].replace("px)", ""))
-        console.log(transformMatrix)
-
+        const transformMatrix = projectWrapper.current!.style.transform? parseInt(projectWrapper.current!.style.transform.split("(")[1].replace("px)", "")) : 0
+        transformRef.current = transformMatrix
     }
 
     const gestureMove = (e: { pageX: number; }) => {
         if (movingRef.current) {
-            const currentPosition = e.pageX;
-            console.log(currentPosition)
-            dispatch({
-                type: "gestureMove",
-                currentPosition: currentPosition
-            })
+            const diff = e.pageX - initialPositionRef.current
+            if(e.pageX - lastPageX.current > 0){
+                if(transformValueRef.current > 0){
+                    return;
+                }
+            }else{
+                if(Math.abs(transformValueRef.current) > projectContainer.current!.offsetWidth - 1000){
+                    return
+                }
+            }
+            transformValueRef.current = transformRef.current + diff 
+            projectWrapper.current!.style.transform = `translateX(${transformValueRef.current}px)`
         }
+        lastPageX.current = e.pageX
     }
 
     const gestureEnd = () => {
         movingRef.current = false
-        dispatch({
-            type: "mouseUp"
-        })
     }
 
     useEffect(() => {
-        window.onmousedown = gestureStart
+        projectContainer.current!.onmousedown = gestureStart
 
-        window.onmousemove = gestureMove
+        projectContainer.current!.onmousemove = gestureMove
 
-        window.onmouseup = gestureEnd
+        projectContainer.current!.onmouseup = gestureEnd
 
     }, [])
 
 
-
-    console.log(moving, initialPosition, transform)
+    console.log(movingRef.current, initialPositionRef.current, transformRef.current)
     return (
         <div ref={projectsRef} className={`workWrapper   transition-all duration-500 ease-in-out w-full   h-full flex section  justify-center items-center  md:mx-5  flex-col absolute top-0 ${className}`}>
 
@@ -157,10 +161,10 @@ export default function DisplayProjects({ className }: { className: string }) {
                         <path d="M31.2083 38.7917L38.7917 31.2083C39.3264 30.6736 39.5938 29.9931 39.5938 29.1667C39.5938 28.3403 39.3264 27.6597 38.7917 27.125L31.1354 19.4688C30.6007 18.934 29.9328 18.6783 29.1317 18.7017C28.3286 18.7269 27.6597 19.0069 27.125 19.5417C26.5903 20.0764 26.3229 20.7569 26.3229 21.5833C26.3229 22.4097 26.5903 23.0903 27.125 23.625L29.75 26.25H20.3438C19.5174 26.25 18.8368 26.529 18.3021 27.0871C17.7674 27.6471 17.5 28.3403 17.5 29.1667C17.5 29.9931 17.78 30.6853 18.34 31.2433C18.8981 31.8033 19.5903 32.0833 20.4167 32.0833H29.75L27.0521 34.7812C26.5174 35.316 26.2617 35.9849 26.285 36.7879C26.3103 37.589 26.5903 38.2569 27.125 38.7917C27.6597 39.3264 28.3403 39.5938 29.1667 39.5938C29.9931 39.5938 30.6736 39.3264 31.2083 38.7917V38.7917ZM29.1667 58.3333C25.1319 58.3333 21.3403 57.5672 17.7917 56.035C14.2431 54.5047 11.1563 52.4271 8.53125 49.8021C5.90625 47.1771 3.82861 44.0903 2.29833 40.5417C0.766111 36.9931 0 33.2014 0 29.1667C0 25.1319 0.766111 21.3403 2.29833 17.7917C3.82861 14.2431 5.90625 11.1563 8.53125 8.53125C11.1563 5.90625 14.2431 3.82764 17.7917 2.29542C21.3403 0.765139 25.1319 0 29.1667 0C33.2014 0 36.9931 0.765139 40.5417 2.29542C44.0903 3.82764 47.1771 5.90625 49.8021 8.53125C52.4271 11.1563 54.5047 14.2431 56.035 17.7917C57.5672 21.3403 58.3333 25.1319 58.3333 29.1667C58.3333 33.2014 57.5672 36.9931 56.035 40.5417C54.5047 44.0903 52.4271 47.1771 49.8021 49.8021C47.1771 52.4271 44.0903 54.5047 40.5417 56.035C36.9931 57.5672 33.2014 58.3333 29.1667 58.3333Z" fill="#B90000" />
                     </svg>
                 </span> */}
-                <div className="ProjectsContainer overflow-hidden">
+                <div ref={projectContainer} className="ProjectsContainer overflow-hidden w-full">
 
                     <div id='projectWrapper' ref={projectWrapper} className={`projectsTrack   select-none / flex md:justify-start  /
-                         w-full flex-nowrap gap-8  duration-500 ease    `} style={{ transform: `translate(${transform}px)` }}  >
+                         w-full flex-nowrap gap-8  duration-500 ease    `}  >
 
                         {
                             projectsObj.map((project: Project, i: number) => {
