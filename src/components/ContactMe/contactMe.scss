@@ -1,24 +1,13 @@
-
-$pageClr: #000;
-$scndryClr: #B90000;
-$third: #fff;
+@use '../../Utilities.scss' as v;
 
 
-.contactWrapper{
-    z-index: 20;
-    position: relative;
-}
+ 
 
 
 .formInput{
-    border-bottom: 1px solid $third  ;
-    color: #fff;
-    -webkit-text-fill-color: #fff;  
-    margin-top: 5px;
-    margin-bottom: 5px;
-    padding-left: 5px;
-    max-width: 400px;
-    width: 100%;
+    border-bottom: 1px solid v.$scndryColor ;
+    color: v.$scndryColor;
+    -webkit-text-fill-color: v.$scndryColor;  
     outline:none;
     background: transparent;
 }
@@ -28,18 +17,8 @@ $third: #fff;
 
 }
 
-.myInfoTitle{
-    font-size: 3rem;
-    color: $scndryClr;
-}
 
-.inputLabel{
-    color: $third;
-}
 
-.formInputContainer{
-    max-width: 500px;
-}
 
 .myInfoAbout{
     p{

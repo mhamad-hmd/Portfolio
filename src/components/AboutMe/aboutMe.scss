@@ -1,64 +1,13 @@
-$pageClr: #000;
-$scndryClr: #b90000;
-$third: #fff;
+@use '../../Utilities.scss' as v;
+    
 
 
-.aboutMeWrapper{
-    position: relative;
-    z-index: 20;
-}
 
-.myInfoWrapper {
-    color: #fff;
-    max-width: 900px;
-    width: 100%;
-    margin: auto;
-    font-size: 20px;
-    line-height: 35px;
-}
+    
 
-
-.myInfo p{
-    max-width: 60char;
-}
-
-.skillTitle {
-    font-size: 30px;
-    font-weight: 600;
-    color: $scndryClr;
-}
 
 .hyperText {
-    color: $scndryClr;
+    color: v.$scndryColor;
     text-decoration: underline;
 }
 
-// .viewAboutMe {
-//     transform: translateY(0);
-//     opacity: 1;
-//     transition: all 1.5s ease;
-//     visibility: visible;
-// }
-
-// .offAboutMe {
-//     top: 0;
-//     transform: translateY(-100vh);
-// }
-
-@media (max-width: 600px) {
-    // .viewWork {
-    //     margin: 0;
-    //     opacity: 1;
-    //     transition: 1s;
-    //     visibility: visible;
-    // }
-
-    // .offWork {
-    //     left: 0;
-    //     margin-left: -300px;
-    //     opacity: 0;
-    //     transition: 0;
-    //     visibility: hidden;
-    // }
-
-}

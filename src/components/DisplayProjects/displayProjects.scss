@@ -14,7 +14,6 @@
 
 .catigoryTitle {
     color: v.$scndryColor;
-    font-weight: 700;
     transition: all 0.5s ease;
     z-index: 10;
     cursor: pointer;
@@ -37,8 +36,7 @@
     opacity: 0;
     transition: 0;
     visibility: hidden;
-    transition: none;
-    scale: 0.9;
+    transition: none !important;
 }
 
 .projectsArrow {
@@ -66,23 +64,13 @@
 
 
 
-@media (max-width: 1028px) {
-   
-
-    .catigoryTitle {
-        font-size: 2.5rem;
-    }
-}
-
 @media (max-width: 768px) {
    
     
     .projectsArrow{
         display: block  !important;
     }
-    .catigoryTitle {
-        font-size: 2.2rem;
-    }
+    
     .viewWork {
         margin: 0;
         opacity: 1;
@@ -103,8 +91,5 @@
 @media (max-width: 425px) {
    
     
-    .catigoryTitle {
-        font-size: 1.8rem;
-        text-align: center;
-    }
+ 
 }

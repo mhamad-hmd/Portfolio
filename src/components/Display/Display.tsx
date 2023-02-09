@@ -1,6 +1,6 @@
 export default function Display ({children}:{children:any}) {
     return(
-        <div className="displayContainer relative flex justify-center">
+        <div className="displayContainer relative flex justify-center overflow-hidden">
             {children}
         </div>
     )

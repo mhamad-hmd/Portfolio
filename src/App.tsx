@@ -1,7 +1,5 @@
 import './App.scss'
-import { AboutMe } from './components/AboutMe/aboutMe'
 import { ParticlesBackground } from './components/Tsparticles/tsParticles'
-import { ContactMe } from './components/ContactMe/contactMe'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { SuccessPage } from './components/successPage/successPage';
 import { SocialMedia } from './components/socialMedia/socialMedia'
@@ -10,6 +8,8 @@ import Header from './components/Header/Header'
 import Display from './components/Display/Display'
 import Home from './components/Home/Home'
 import DisplayProjects from './components/DisplayProjects/displayProjects';
+import AboutMe from './components/AboutMe/AboutMe';
+import ContactMe from './components/ContactMe/contactMe';
 
 
 function App() {
@@ -23,11 +23,13 @@ console.log(display)
         <Routes>
 
           <Route path="/" element={
-            <div className='mainPageContainer max-h-screen overflow-hidden relative'>
+            <div className='mainPageContainer max-h-screen overflow-hidden relative / flex flex-col gap-2 /'>
               <Header display={display} changeDisplay={changeDisplay} />
               <Display>
-                <Home className={`${display === "Home" ? "scale-100 z-40 opacity-100" : "scale-0 invisible z-10 opacity-0"}`} />
-                <DisplayProjects  className={`${display === "Projects" ? "scale-100 z-40 opacity-100" : "scale-0 invisible z-10opacity-0"}`} />
+                <Home className={`${display === "Home" ? "scale-100 z-40 opacity-100 translate-x-0" : "scale-60 translate-x-2/3 invisible z-10 opacity-0"}`} />
+                <DisplayProjects  className={`${display === "Projects" ? "scale-100 z-40 opacity-100 translate-x-0" : "scale-60 invisible z-10 translate-x-2/3  opacity-0"}`} />
+                <AboutMe  className={`${display === "Info" ? "scale-100 z-40 opacity-100 translate-x-0" : "scale-60 invisible z-10 translate-x-2/3  opacity-0"}`} />
+                <ContactMe  className={`${display === "Contact" ? "scale-100 z-40 opacity-100 translate-x-0" : "scale-60 invisible z-10 translate-x-2/3  opacity-0"}`} />
               </Display>
 
             </div>

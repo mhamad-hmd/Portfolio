@@ -13,6 +13,12 @@ h1, h2, h3, .mainFont, .btn span{
   color: v.$scndryColor;
 }
 
+.btn{
+  background: v.$scndryColor !important;  
+  color: v.$mainColor !important;
+  
+}
+
 
 
 input:-webkit-autofill,
