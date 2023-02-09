@@ -2,7 +2,6 @@
 import './successPage.scss'
 
 export const SuccessPage = () => {
-    console.log('success')
     return (
         <div className='my-8'>
             <div className='grid gap-4 md:gap-8 lg:gap-12 justify-center mainFont font-bold'>

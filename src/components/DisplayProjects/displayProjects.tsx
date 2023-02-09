@@ -39,7 +39,6 @@ export default function DisplayProjects({ className }: { className: string }) {
 
 
 
-
     const myWorkBtn = 'myWork'
 
     scrollIntoView(myRef.current, 'myWork')
@@ -56,7 +55,7 @@ export default function DisplayProjects({ className }: { className: string }) {
     useEffect(() => {
         projectWrapper.current!.classList.add('workRefresh')
         setTimeout(() => projectWrapper.current!.classList.remove('workRefresh'), 1)
-        
+
     }, [category])
 
 
@@ -69,20 +68,22 @@ export default function DisplayProjects({ className }: { className: string }) {
     }
 
     const gestureMove = (e: { pageX: number; }) => {
-        console.log(movingRef.current )
+        console.log(movingRef.current)
         if (movingRef.current) {
             const diff = e.pageX - initialPositionRef.current
+            const offset = projectWrapper.current!.children.length > 3 ? .7 : .5
             if (e.pageX - lastPageX.current > 0) {
                 if (transformValueRef.current > 0) {
                     return;
                 }
             } else {
-                if (Math.abs(transformValueRef.current) > projectWrapper.current!.offsetWidth * .7) {
+                if (Math.abs(transformValueRef.current) > projectWrapper.current!.offsetWidth * offset) {
                     return
                 }
             }
+
             transformValueRef.current = transformRef.current + diff
-            console.log(transformValueRef.current + " > " + projectWrapper.current!.offsetWidth)
+            console.log(transformValueRef.current + " > " + offset)
             projectWrapper.current!.style.transform = `translateX(${transformValueRef.current}px)`
         }
         lastPageX.current = e.pageX
@@ -100,18 +101,18 @@ export default function DisplayProjects({ className }: { className: string }) {
 
             projectContainer.current!.onpointerup = gestureEnd
         }
-        else{
+        else {
 
             projectContainer.current!.ontouchend = gestureStart
-    
+
             projectContainer.current!.ontouchmove = gestureMove
-    
+
             projectContainer.current!.ontouchstart = gestureEnd
-    
+
             projectContainer.current!.onmousedown = gestureStart
-    
+
             projectContainer.current!.onmousemove = gestureMove
-    
+
             projectContainer.current!.onmouseup = gestureEnd
 
         }
@@ -121,25 +122,25 @@ export default function DisplayProjects({ className }: { className: string }) {
 
     console.log(movingRef.current, initialPositionRef.current, transformRef.current)
     return (
-        <div ref={projectsRef} className={`workWrapper   transition-all duration-300 ease-in-out w-full   h-full flex section   items-center  md:mx-5  flex-col absolute top-0 ${className}`}>
+        <div ref={projectsRef} className={`workWrapper   transition-all duration-500 ease-in-out w-full    h-full flex section   items-center    flex-col absolute top-0 ${className}`}>
 
 
-            <div ref={displayRef} className={`  relative / justify-between items-center flex flex-col md:flex-row gap-4  md:gap-12 / max-w-full  w-full h-full  `}   >
+            <div ref={displayRef} className={`  relative /  items-center flex flex-col md:flex-row gap-4  md:gap-12 / max-w-full  w-full h-full  `}   >
 
                 <div className="myWorkNav flex justify-center items-center whitespace-nowrap md:h-full  ">
-                    <ul className={`categoriesWrapper scndryFont scndryColor font-medium  / flex md:flex-col gap-8 justify-center p-4 transition-all duration-200  text-2xl lg:text-4xl md:text-3xl  ${!category? "translate-y-[20vh] md:translate-y-0 md:translate-x-[40vw] scale-125 md:scale-125" : "translatey-0 scale-100 md:translate-x-0"}  `} onClick={() => setMainProject("")}>
-                        <li className={`catigoryTitle  `} onClick={() => handleNavClick('All')}>All</li>
-                        <li className={`catigoryTitle  `} onClick={() => handleNavClick("Shopify")}>Shopify</li>
-                        <li className={`catigoryTitle   `} onClick={() => handleNavClick('Full-Stack')}>Full-Stack</li>
+                    <ul className={`categoriesWrapper scndryFont scndryColor font-medium  / flex md:flex-col gap-8 justify-center p-4 transition-all duration-200  text-2xl lg:text-4xl md:text-3xl  ${!category ? "translate-y-[10vh] md:translate-y-0 md:translate-x-[37vw] scale-125 md:scale-125" : "translatey-0 scale-100 md:translate-x-0"}  `} onClick={() => setMainProject("")}>
+                        <li className={`catigoryTitle  transition-all duration-300 border-b w-fit  ${category == "All" ? " border-scndryColor scale-105" : "border-transparent scale-100"} `} onClick={() => handleNavClick('All')}>All</li>
+                        <li className={`catigoryTitle transition-all duration-300 border-b w-fit ${category == "Shopify" ? " border-scndryColor scale-105" : "border-transparent scale-100"} `} onClick={() => handleNavClick("Shopify")}>Shopify</li>
+                        <li className={`catigoryTitle   transition-all duration-300 border-b w-fit  ${category == "Full-Stack" ? " border-scndryColor scale-105" : "border-transparent scale-100"} `} onClick={() => handleNavClick('Full-Stack')}>Full-Stack</li>
                     </ul>
                 </div>
 
 
-               
+
                 <div ref={projectContainer} className="ProjectsContainer overflow-hidden w-full max-w-7xl ">
 
                     <div id='projectWrapper' ref={projectWrapper} className={`projectsTrack   / flex md:justify-start  /
-                          w-max flex-nowrap gap-8 transition-all duration-500 ease-in-out   touch-none  ${category? "translate-x-0" : "translate-x-full"}   `}  >
+                          w-max flex-nowrap gap-8 transition-all duration-500 ease-in-out   touch-none  ${category ? "translate-x-0" : "translate-x-full"}   `}  >
 
                         {
                             projectsObj.map((project: Project, i: number) => {
@@ -163,7 +164,7 @@ export default function DisplayProjects({ className }: { className: string }) {
                                     }
                                     else if (category == "All") {
                                         return (
-                                            <div  className={`projectCardWrapper snap-center  h-96 max-w-lg   flex-shrink-0  ${category ? 'viewWork' : 'offWorkLeft'} cursor-pointer`} >
+                                            <div className={`projectCardWrapper snap-center  h-96 max-w-lg   flex-shrink-0  ${category ? 'viewWork' : 'offWorkLeft'} cursor-pointer`} >
                                                 <ProjectCard mainProject={mainProject} scrollSpeed={0.2} myParallaxView={myElementIsVisible} even={i % 2 == 0 ? true : false} index={project.index} title={project.title} typeOfwork={project.typeOfwork} password={project.password} imgPath={project.imgPath} projectUrl={project.url} />
                                             </div>
                                         )

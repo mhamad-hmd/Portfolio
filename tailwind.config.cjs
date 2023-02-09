@@ -24,7 +24,11 @@ module.exports = {
       '2xl': '1536px',
       // => @media (min-width: 1536px) { ... }
     },
-    extend: {},
+    extend: {
+      colors:{
+        "scndryColor": "#0E2E14"
+      }
+    },
   },
   plugins: [],
 }

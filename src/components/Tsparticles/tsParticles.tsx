@@ -14,84 +14,74 @@ export const ParticlesBackground = () => {
   }, []);
 
   const particlesLoaded = useCallback(async (container: Container | any) => {
-    
+
   }, []);
 
-  return(
+  return (
     <Particles id="tsparticles"
-    init={particlesInit}
-    loaded={particlesLoaded}
-    options={{
-      background: {
-        color: {
-          value: "000000 ",
-        },
-      },
-      fpsLimit: 60,
-      interactivity: {
-        events: {
-          onClick: {
-            enable: true,
-            mode: "push",
+      init={particlesInit}
+      loaded={particlesLoaded}
+      options={{
+        "particles": {
+          "color": {
+            "value": "#0E2E14"
           },
-          onHover: {
-            enable: true,
-            mode: "repulse",
-          },
-          resize: true,
+            "number": {
+                "value": 100,
+                "density": {
+                    "enable": false
+                }
+            },
+            "size": {
+                "value": 3,
+                "random": true,
+                "anim": {
+                    "speed": 4,
+                    "size_min": 0.3
+                }
+            },
+            "line_linked": {
+                "enable": false
+            },
+            "move": {
+              "enable": true,
+              "speed": 1,
+              "direction": "none",
+              "random": false,
+              "straight": false,
+              "out_mode": "out",
+              "bounce": false,
+              "attract": {
+                "enable": false,
+                "rotateX": 600,
+                "rotateY": 1200
+              }
+            }
         },
-        modes: {
-          push: {
-            quantity: 2,
-          },
-          repulse: {
-            distance: 200,
-            duration: 0.1,
-          },
-        },
-      },
-      particles: {
-        color: {
-          value: "#08fdd8",
-        },
-        links: {
-          color: "#08fdd8",
-          distance: 130,
-          enable: true,
-          opacity: 0.5,
-          width: 1,
-        },
-        collisions: {
-          enable: true,
-        },
-        move: {
-          direction: "none",
-          enable: true,
-          outModes: {
-            default: "bounce",
-          },
-          random: false,
-          speed: 2,
-          straight: false,
-        },
-        number: {
-          density: {
-            enable: true,
-            area: 900,
-          },
-          value: 60,
-        },
-        opacity: {
-          value: 0.5,
-        },
-        shape: {
-          type: "circle",
-        },
-        size: {
-          value: { min: 1, max: 5 },
-        },
-      },
-      detectRetina: true,
+        "interactivity": {
+            "events": {
+                "onhover": {
+                    "enable": true,
+                    "mode": "bubble"
+                },
+                "onclick": {
+                    "enable": true,
+                    "mode": "repulse"
+                }
+            },
+            "modes": {
+                "bubble": {
+                    "distance": 250,
+                    "duration": 2,
+                    "size": 0,
+                    "opacity": 0
+                },
+                "repulse": {
+                    "distance": 400,
+                    "duration": 4
+                }
+            }
+        }
     }}
     />
   )
@@ -99,3 +89,17 @@ export const ParticlesBackground = () => {
 
 
 
+// "move": {
+//   "enable": true,
+//   "speed": 6,
+//   "direction": "none",
+//   "random": false,
+//   "straight": false,
+//   "out_mode": "out",
+//   "bounce": false,
+//   "attract": {
+//     "enable": false,
+//     "rotateX": 600,
+//     "rotateY": 1200
+//   }
+// }
