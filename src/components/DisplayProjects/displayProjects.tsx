@@ -59,7 +59,7 @@ export default function DisplayProjects({ className }: { className: string }) {
     }, [category])
 
 
-    const gestureStart = (e: { pageX: number; }) => {
+    const gestureStart = (e: any) => {
         movingRef.current = true
         initialPositionRef.current = e.pageX
 
@@ -67,7 +67,7 @@ export default function DisplayProjects({ className }: { className: string }) {
         transformRef.current = transformMatrix
     }
 
-    const gestureMove = (e: { pageX: number; }) => {
+    const gestureMove = (e: any) => {
         console.log(movingRef.current)
         if (movingRef.current) {
             const diff = e.pageX - initialPositionRef.current
