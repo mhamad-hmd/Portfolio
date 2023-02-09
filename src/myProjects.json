@@ -37,6 +37,15 @@
             "url": "https://royal-coats.myshopify.com/",
             "imgPath": "../../../public/royal-coats.png",
             "projectCategory": "shopify"
+        },
+        {
+            "index": "05",
+            "title": "MyDay",
+            "typeOfwork": "Front-End x Design",
+            "password": "",
+            "url": "https://trustmyday.com/",
+            "imgPath": "../../../public/myDay.png",
+            "projectCategory": "shopify"
         }
         
     ]
