@@ -7,7 +7,7 @@
             "typeOfwork": "Front-End",
             "password": "12345",
             "url": "https://storefortestapp.myshopify.com/",
-            "imgPath": "../../../public/testStorePreview.png",
+            "imgPath": "https://res.cloudinary.com/de8wnrdnn/image/upload/v1675968127/portfolio/a95ttedlmetpd2dd4yvi.png",
             "projectCategory": "shopify"
         },
         
@@ -17,7 +17,7 @@
             "typeOfwork": "Full-Stack",
             "password": "",
             "url": "https://mhamad-hmd.github.io/Smart-Brain/",
-            "imgPath": "../../../public/smartBrainPrev.png",
+            "imgPath": "https://res.cloudinary.com/de8wnrdnn/image/upload/v1675968127/portfolio/l8owi4bp67jqwvf7089x.png",
             "projectCategory": "full-stack"
         },
         {
@@ -26,7 +26,7 @@
             "typeOfwork": "Full-Stack",
             "password": "",
             "url": "https://eshop-webproject.herokuapp.com/",
-            "imgPath": "../../../public/ESHOP.png",
+            "imgPath": "https://res.cloudinary.com/de8wnrdnn/image/upload/v1675968123/portfolio/z4xjmbkihnud9cra1jlv.png",
             "projectCategory": "full-stack"
         },
         {
@@ -35,7 +35,7 @@
             "typeOfwork": "Front-End x Design",
             "password": "12345",
             "url": "https://royal-coats.myshopify.com/",
-            "imgPath": "../../../public/royal-coats.png",
+            "imgPath": "https://res.cloudinary.com/de8wnrdnn/image/upload/v1675968130/portfolio/cad8dmyj97nofycqwzyx.png",
             "projectCategory": "shopify"
         },
         {
@@ -44,7 +44,7 @@
             "typeOfwork": "Front-End x Design",
             "password": "",
             "url": "https://trustmyday.com/",
-            "imgPath": "../../../public/myDay.png",
+            "imgPath": "https://res.cloudinary.com/de8wnrdnn/image/upload/v1675968130/portfolio/h04zvlyz19m65ddkutuy.png",
             "projectCategory": "shopify"
         }
         
