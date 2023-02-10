@@ -20,13 +20,13 @@ function App() {
   console.log(display)
   return (
     <Router>
+      <ParticlesBackground />
       <WelcomePage />
-      <div className="App h-full p-8 md:p-12 ">
+      <div className="App h-full flex justify-center items-center   ">
         <Routes>
 
           <Route path="/" element={
-            <div className='mainPageContainer  overflow-hidden relative / flex flex-col gap-2 / border border-scndryColor h-full '>
-              <ParticlesBackground />
+            <div className='mainPageContainer  overflow-hidden relative / flex flex-col gap-2 / border border-scndryColor h-[95vh] w-[95vw] '>
               <Header display={display} changeDisplay={changeDisplay} />
               <Display>
                 <Home className={`${display === "Home" ? "scale-100 z-40 opacity-100 translate-x-0" : "scale-60 translate-x-2/3 invisible z-10 opacity-0"}`} />
