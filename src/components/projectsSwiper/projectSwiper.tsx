@@ -16,6 +16,7 @@ type Project = {
 
 export default function ProjectsSwiper({ category, projects }: { category: string, projects: Array<Project> }) {
 
+    const projectCard = useRef<null | HTMLDivElement>(null)
     const projectWrapper = useRef<null | HTMLDivElement>(null)
     const projectContainer = useRef<null | HTMLDivElement>(null)
     const currentOffsetX = useRef(0)
@@ -35,6 +36,8 @@ export default function ProjectsSwiper({ category, projects }: { category: strin
 
 
     const onTouchMove = (e: TouchEvent | MouseEvent) => {
+        setSelectable(false)
+
         const currentX = getTouchEventData(e).clientX;
         const diff = getRefValue(startXRef) - currentX;
         let newOffsetX = getRefValue(currentOffsetX) - diff
@@ -57,10 +60,10 @@ export default function ProjectsSwiper({ category, projects }: { category: strin
     const onTouchEnd = () => {
         setSelectable(true)
         setIsSwiping(false)
-        const containerWidth = projectWrapper.current!.offsetWidth;
+        const newContainerWidth = projectCard.current!.clientWidth * projectWrapper.current!.children.length
+        const containerWidth = projectCard.current!.offsetWidth;
         let newOffsetX = getRefValue(offsetXRef);
         newOffsetX = Math.round(newOffsetX / containerWidth) * containerWidth;
-
         setOffsetX(newOffsetX);
         window.removeEventListener('touchend', onTouchEnd);
         window.removeEventListener('touchmove', onTouchMove);
@@ -71,11 +74,9 @@ export default function ProjectsSwiper({ category, projects }: { category: strin
     const onTouchStart = (
         e: React.TouchEvent<HTMLDivElement> | React.MouseEvent<HTMLDivElement>
     ) => {
-        setSelectable(false)
         setIsSwiping(true)
         const containerEl = getRefValue(projectWrapper)
         minOffsetXRef.current = containerEl.offsetWidth - containerEl.scrollWidth;
-        console.log(containerEl.offsetWidth, containerEl.scrollWidth)
         currentOffsetX.current = getRefValue(offsetXRef);
         startXRef.current = getTouchEventData(e).clientX
         window.addEventListener('touchmove', onTouchMove);
@@ -119,7 +120,7 @@ export default function ProjectsSwiper({ category, projects }: { category: strin
                         }
                         else if (category == "All") {
                             return (
-                                <div className={`projectCardWrapper snap-center  h-96 max-w-lg   flex-shrink-0  ${category ? 'viewWork' : 'offWorkLeft'} cursor-pointer`} >
+                                <div ref={projectCard} className={`projectCardWrapper snap-center  h-96 max-w-lg   flex-shrink-0 ${selectable? "pointer-events-auto" : "pointer-events-none"}  ${category ? 'viewWork' : 'offWorkLeft'} cursor-pointer`}  >
                                     <ProjectCard  index={project.index} title={project.title} typeOfwork={project.typeOfwork} password={project.password} imgPath={project.imgPath} projectUrl={project.url} selectable={selectable} />
                                 </div>
                             )

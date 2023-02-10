@@ -33,9 +33,9 @@ export const ProjectCard = (props: props) => {
 
 
     return (
-        <a  ref={displayRef} onClick={(e) => !selectable && e.preventDefault()} href={projectUrl} className={`projectWrapper select-none  h-full  relative   `} >
+        <a  ref={displayRef} href={projectUrl} className={`projectWrapper select-none  h-full  relative   `} >
 
-            <img ref={previewImg} unselectable='on' id="previewImg" width={2400} className='previewImg  select-none pointer-events-none h-full w-full max-w-xs max-h-56 md:max-w-lg md:max-h-full   object-cover ' src={imgPath} alt="" aria-disabled />
+            <img ref={previewImg} unselectable='on' id="previewImg" width={2400} className='previewImg  select-none pointer-events-none h-full w-full max-w-xs max-h-56 md:max-w-lg md:max-h-full   object-cover object-center ' src={imgPath} alt="" aria-disabled />
 
             <div ref={infoContainer} unselectable='on' className={`InfoContainer   absolute top-0   flex flex-col gap-4 md:gap-8 h-full w-full p-4 bg-black/40  backdrop-blur-[1px] `}>
                 <span className=' mainFont mainColor text-lg sm:text-3xl'>{index}</span>
