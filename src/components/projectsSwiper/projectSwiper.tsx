@@ -61,7 +61,7 @@ export default function ProjectsSwiper({ category, projects }: { category: strin
         setSelectable(true)
         setIsSwiping(false)
         const newContainerWidth = projectCard.current!.clientWidth * projectWrapper.current!.children.length
-        const containerWidth = projectCard.current!.offsetWidth;
+        const containerWidth = projectCard.current!.offsetWidth + 25;
         let newOffsetX = getRefValue(offsetXRef);
         newOffsetX = Math.round(newOffsetX / containerWidth) * containerWidth;
         setOffsetX(newOffsetX);
