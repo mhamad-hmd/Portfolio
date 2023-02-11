@@ -28,8 +28,6 @@ export const ProjectCard = (props: props) => {
 
     }, [])
 
-    // myParallax(previewImg, scrollSpeed, myElementIsVisible)
-    // myParallax(infoContainer, scrollSpeed, myElementIsVisible)
 
 
     return (

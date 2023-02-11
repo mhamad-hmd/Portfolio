@@ -22,15 +22,15 @@ function App() {
     <Router>
       <ParticlesBackground />
       <div className="theme / absolute top-0 bottom-20 max-w-[9.3vw] md:max-w-[8.9vw] w-full /  transition flex flex-col justify-end gap-16 font-bold mainFont text-sm  md:text-md  ">
-        <div className=" flex -rotate-90 justify-center items-center gap-2  -ml-4 sm:ml-0 ">
-          <div className={`checkBox border border-scndryColor w-3 h-3 md:w-4 md:h-4 flex-shrink-0 ${dark ? "bg-mainColor border-mainColor" : "bg-transparent "} `} onClick={() => setDark(true)}>
+        <div className=" flex -rotate-90 justify-center items-center gap-2  -ml-4 sm:ml-0 " onClick={() => setDark(true)}>
+          <div className={`checkBox border border-scndryColor w-3 h-3 md:w-4 md:h-4 flex-shrink-0 cursor-pointer  ${dark ? "bg-mainColor border-mainColor" : "bg-transparent "} `} >
           </div>
-          <label className={`${dark ? "text-mainColor" : "text-scndryColor"} transition-all duration-1000 `} >DARK</label>
+          <label className={`${dark ? "text-mainColor" : "text-scndryColor"} transition-all duration-1000 cursor-pointer `} >DARK</label>
         </div>
-        <div className=' flex -rotate-90 justify-center items-center gap-2 -ml-4 sm:ml-0 '>
-          <div className={`checkBox border border-scndryColor w-3 h-3 md:w-4 md:h-4 flex-shrink-0 ${!dark ? "bg-scndryColor" : "bg-transparent border-mainColor"} `} onClick={() => setDark(false)}>
+        <div className=' flex -rotate-90 justify-center items-center gap-2 -ml-4 sm:ml-0 ' onClick={() => setDark(false)} >
+          <div className={`checkBox border border-scndryColor w-3 h-3 md:w-4 md:h-4 flex-shrink-0 cursor-pointer ${!dark ? "bg-scndryColor" : "bg-transparent border-mainColor"} `} onClick={() => setDark(false)}>
           </div>
-          <label className={`${dark ? "text-mainColor" : "text-scndryColor"} transition-all duration-1000  `}>LIGHT</label>
+          <label className={`${dark ? "text-mainColor" : "text-scndryColor"} transition-all duration-1000 cursor-pointer  `}>LIGHT</label>
         </div>
       </div>
       <div className={`App h-full flex justify-center items-center transition-all ease-out duration-1000 ${dark ? "bg-dark" : "bg-mainColor"}   `}>
