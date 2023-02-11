@@ -29,7 +29,9 @@ module.exports = {
         "mainColor": "#F0F0F5",
         "scndryColor": "#0E2E14",
         "scndryLightColor": "#123D1A",
-        "dark": "#0C0C0F"
+        "dark": "#0E0E0E",
+        "third": "#CDCDCD",
+
       }
     },
   },

@@ -28,9 +28,9 @@ export default function AboutMe  ({className, dark} : {className:string, dark: b
 
                 <div className={`myInfoWrapper grid gap-4 lg:gap-12 md:gap-8 justify-center items-center `}>
 
-                        <p className={`break-words m-auto max-w-prose w-full ${dark? "text-scndryLightColor" : "text-scndryColor"} scndryFont font-medium text-xl md:text-2xl `}>Started my web development journey by a full stack course on Udemy, and ever since I am acquiring my skills and knowledge to always stay up to date in this field. I am a cooperative worker, and as my projects reveal about me, I am dedicated, responsible and disciplined and also a perfectionist.</p>
+                        <p className={`break-words m-auto max-w-prose w-full ${dark? "text-mainColor" : "text-scndryColor"} scndryFont font-medium text-xl md:text-2xl `}>Started my web development journey by a full stack course on Udemy, and ever since I am acquiring my skills and knowledge to always stay up to date in this field. I am a cooperative worker, and as my projects reveal about me, I am dedicated, responsible and disciplined and also a perfectionist.</p>
 
-                    <div ref={myRef} className={`py-4 ${dark? "text-scndryLightColor" : "text-scndryColor"}  w-full `}>
+                    <div ref={myRef} className={`py-4 ${dark? "text-mainColor" : "text-scndryColor"}  w-full `}>
 
                         <h1 className={`skillTitle mainFont font-bold text-3xl lg:text-4xl `}>Skills :</h1>
 

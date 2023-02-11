@@ -35,20 +35,20 @@ export default function ContactMe({ className, dark }: { className: string, dark
                     <input type="hidden" name="_next" value="https://mhamad-portfolio.netlify.app/success"></input>
                     <div className="formInputContainer gap-6 /  flex flex-col / w-full ">
 
-                        <div className={`inputWrapper scndryFont font-bold ${dark? "text-scndryLightColor" : "text-scndryColor"}`}>
+                        <div className={`inputWrapper scndryFont font-bold ${dark? "text-mainColor" : "text-scndryColor"}`}>
                             <label className='inputLabel font-bold' htmlFor="name">Name</label>
-                            <input id='name' className='formInput w-72 md:w-[500px] font-medium px-1' type="text" name='Name' />
+                            <input id='name' className={`formInput w-72 md:w-[500px] font-medium${dark? "border-mainColor text-mainColor" : "border-scndryColor text-scndryColor"} px-1`} type="text" name='Name' />
                         </div>
 
 
-                        <div className={`inputWrapper scndryFont font-bold ${dark? "text-scndryLightColor" : "text-scndryColor"}`}>
+                        <div className={`inputWrapper scndryFont font-bold ${dark? "text-mainColor" : "text-scndryColor"}`}>
                             <label className='inputLabel font-bold' htmlFor="email">Email</label>
-                            <input id='email' className='formInput w-72 md:w-[500px] font-medium px-1' name='Email' type="Email" />
+                            <input id='email' className={`formInput w-72 md:w-[500px] font-medium${dark? "border-mainColor text-mainColor" : "border-scndryColor text-scndryColor"} px-1`} name='Email' type="Email" />
                         </div>
 
-                        <div className={`inputWrapper scndryFont font-bold  ${dark? "text-scndryLightColor" : "text-scndryColor"}`}>
+                        <div className={`inputWrapper scndryFont font-bold  ${dark? "text-mainColor" : "text-scndryColor"}`}>
                             <label className='inputLabel font-bold' htmlFor="about">Message</label>
-                            <textarea id='about font-medium' className='formInput w-72 md:w-[500px] font-medium  px-1' name="About" />
+                            <textarea id='about font-medium' className={`formInput w-72 md:w-[500px] font-medium ${dark? "border-mainColor text-mainColor" : "border-scndryColor text-scndryColor"} px-1`} name="About" />
                         </div>
                     </div>
                     <div className='flex my-2'>
