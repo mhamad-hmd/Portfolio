@@ -32,7 +32,7 @@ export default function ContactMe({ className, dark }: { className: string, dark
                     <input type="hidden" name='_captcha' value='false' />
 
                     {/* check if successfull */}
-                    <input type="hidden" name="_next" value="https://mhmd-portfolio.herokuapp.com/success"></input>
+                    <input type="hidden" name="_next" value="https://mhamad-portfolio.netlify.app/success"></input>
                     <div className="formInputContainer gap-6 /  flex flex-col / w-full ">
 
                         <div className={`inputWrapper scndryFont font-bold ${dark? "text-scndryLightColor" : "text-scndryColor"}`}>
