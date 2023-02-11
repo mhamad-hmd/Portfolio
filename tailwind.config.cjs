@@ -26,7 +26,10 @@ module.exports = {
     },
     extend: {
       colors:{
-        "scndryColor": "#0E2E14"
+        "mainColor": "#F0F0F5",
+        "scndryColor": "#0E2E14",
+        "scndryLightColor": "#123D1A",
+        "dark": "#0C0C0F"
       }
     },
   },

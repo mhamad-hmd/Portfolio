@@ -6,7 +6,7 @@ import { scrollIntoView } from '../scrollIntoView/scrollIntoview';
 import './contactMe.scss';
 
 
-export default function ContactMe({ className }: { className: string }) {
+export default function ContactMe({ className, dark }: { className: string, dark:boolean }) {
 
 
     const myRef = useRef<null | HTMLDivElement>(null)
@@ -35,25 +35,25 @@ export default function ContactMe({ className }: { className: string }) {
                     <input type="hidden" name="_next" value="https://mhmd-portfolio.herokuapp.com/success"></input>
                     <div className="formInputContainer gap-6 /  flex flex-col / w-full ">
 
-                        <div className="inputWrapper scndryFont font-bold scndryColor">
+                        <div className={`inputWrapper scndryFont font-bold ${dark? "text-scndryLightColor" : "text-scndryColor"}`}>
                             <label className='inputLabel font-bold' htmlFor="name">Name</label>
                             <input id='name' className='formInput w-72 md:w-[500px] font-medium px-1' type="text" name='Name' />
                         </div>
 
 
-                        <div className="inputWrapper scndryFont font-bold scndryColor ">
+                        <div className={`inputWrapper scndryFont font-bold ${dark? "text-scndryLightColor" : "text-scndryColor"}`}>
                             <label className='inputLabel font-bold' htmlFor="email">Email</label>
                             <input id='email' className='formInput w-72 md:w-[500px] font-medium px-1' name='Email' type="Email" />
                         </div>
 
-                        <div className="inputWrapper w-full scndryFont font-bold  scndryColor">
+                        <div className={`inputWrapper scndryFont font-bold  ${dark? "text-scndryLightColor" : "text-scndryColor"}`}>
                             <label className='inputLabel font-bold' htmlFor="about">Message</label>
                             <textarea id='about font-medium' className='formInput w-72 md:w-[500px] font-medium  px-1' name="About" />
                         </div>
                     </div>
                     <div className='flex my-2'>
                         <button className='btn px-4 py-2 fontMain  rounded text-xl md:text-2xl m-auto' type='submit'>
-                            <span className='mainFont'>Submit</span>
+                            <span className={`mainFont font-bold ${dark? "text-dark " : "text-mainColor"}`}>Submit</span>
                         </button>
                     </div>
                 </form>

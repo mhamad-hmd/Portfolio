@@ -17,22 +17,33 @@ function App() {
 
 
   const { display, changeDisplay } = DisplayRoute();
+  const [dark, setDark] = useState(false)
   console.log(display)
   return (
     <Router>
       <ParticlesBackground />
       <WelcomePage />
-      <div className="App h-full flex justify-center items-center   ">
+      <div  className="theme absolute left-0 flex flex-col gap-2">
+        <div className="">
+          <label className='text-white' >Dark</label>
+          <input type="checkbox" />
+        </div>
+        <div>
+          <label className="">Light</label>
+          <input type="checkbox" />
+        </div>
+      </div>
+      <div className={`App h-full flex justify-center items-center transition-all ease-out duration-1000 ${dark ? "bg-dark" : "bg-mainColor"}   `}>
         <Routes>
 
           <Route path="/" element={
-            <div className='mainPageContainer  overflow-hidden relative / flex flex-col gap-2 md:gap-8 / border border-scndryColor h-[95vh] w-[95vw] '>
-              <Header display={display} changeDisplay={changeDisplay} />
+            <div className={`mainPageContainer  overflow-hidden relative / flex flex-col gap-2 md:gap-8 / border ${dark ? "border-scndryLightColor" : "border-scndryColor"} h-[95vh] w-[95vw] `}>
+              <Header dark={dark} display={display} changeDisplay={changeDisplay} />
               <Display>
-                <Home className={`${display === "Home" ? "scale-100 z-40 opacity-100 translate-x-0" : "scale-60 translate-x-2/3 invisible z-10 opacity-0 pointer-events-none"}`} />
-                <DisplayProjects className={`my-8 ${display === "Projects" ? "scale-100 z-40 opacity-100 translate-x-0" : "scale-60 invisible z-10 translate-x-2/3  opacity-0 pointer-events-none"}`} />
-                <AboutMe className={`${display === "Info" ? "scale-100 z-40 opacity-100 translate-x-0" : "scale-60 invisible z-10 translate-x-2/3  opacity-0 pointer-events-none"}`} />
-                <ContactMe className={`${display === "Contact" ? "scale-100 z-40 opacity-100 translate-x-0" : "scale-60 invisible  z-10 translate-x-2/3  opacity-0 pointer-events-none"}`} />
+                <Home dark={dark} className={`${display === "Home" ? "scale-100 z-40 opacity-100 translate-x-0" : "scale-60 translate-x-2/3 invisible z-10 opacity-0 pointer-events-none"}`} />
+                <DisplayProjects dark={dark} className={`my-8 ${display === "Projects" ? "scale-100 z-40 opacity-100 translate-x-0" : "scale-60 invisible z-10 translate-x-2/3  opacity-0 pointer-events-none"}`} />
+                <AboutMe dark={dark} className={`${display === "Info" ? "scale-100 z-40 opacity-100 translate-x-0" : "scale-60 invisible z-10 translate-x-2/3  opacity-0 pointer-events-none"}`} />
+                <ContactMe dark={dark} className={`${display === "Contact" ? "scale-100 z-40 opacity-100 translate-x-0" : "scale-60 invisible  z-10 translate-x-2/3  opacity-0 pointer-events-none"}`} />
               </Display>
 
             </div>
