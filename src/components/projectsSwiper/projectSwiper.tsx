@@ -87,7 +87,7 @@ export default function ProjectsSwiper({ category, projects }: { category: strin
 
     return (
         <div ref={projectContainer}
-            className="ProjectsContainer overflow-hidden w-full max-w-full"
+            className="ProjectsContainer overflow-hidden w-full h-full max-w-full"
             onMouseDown={onTouchStart}
             onTouchStart={onTouchStart}
         >
