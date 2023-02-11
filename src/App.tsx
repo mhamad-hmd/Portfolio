@@ -18,7 +18,6 @@ function App() {
 
   const { display, changeDisplay } = DisplayRoute();
   const [dark, setDark] = useState(false)
-  console.log(display)
   return (
     <Router>
       <ParticlesBackground />
