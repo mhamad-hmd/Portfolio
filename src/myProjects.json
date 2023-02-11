@@ -25,7 +25,7 @@
             "title": "ESHOP",
             "typeOfwork": "Full-Stack",
             "password": "",
-            "url": "https://eshop-webproject.herokuapp.com/",
+            "url": "https://eshop-app-project.netlify.app/",
             "imgPath": "https://res.cloudinary.com/de8wnrdnn/image/upload/v1675968123/portfolio/z4xjmbkihnud9cra1jlv.png",
             "projectCategory": "full-stack"
         },
