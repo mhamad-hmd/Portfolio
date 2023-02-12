@@ -3,25 +3,34 @@
     "Projects": [
         {
             "index": "01",
-            "title": "Shopify Theme",
-            "typeOfwork": "Front-End",
+            "title": "Hydrogen",
+            "typeOfwork": "Front-End x Design",
+            "password": "",
+            "url": "https://trustmyday.com/",
+            "imgPath": "https://res.cloudinary.com/de8wnrdnn/image/upload/v1676190838/portfolio/qq2ynldmepjaepndhh2w.png",
+            "projectCategory": "shopify"
+        },
+        {
+            "index": "02",
+            "title": "MyDay",
+            "typeOfwork": "Front-End x Design",
+            "password": "",
+            "url": "https://trustmyday.com/",
+            "imgPath": "https://res.cloudinary.com/de8wnrdnn/image/upload/v1675968130/portfolio/h04zvlyz19m65ddkutuy.png",
+            "projectCategory": "shopify"
+        },
+        {
+            "index": "03",
+            "title": "Royal Coats",
+            "typeOfwork": "Front-End x Design",
             "password": "12345",
-            "url": "https://storefortestapp.myshopify.com/",
-            "imgPath": "https://res.cloudinary.com/de8wnrdnn/image/upload/v1675968127/portfolio/a95ttedlmetpd2dd4yvi.png",
+            "url": "https://royal-coats.myshopify.com/",
+            "imgPath": "https://res.cloudinary.com/de8wnrdnn/image/upload/v1675968130/portfolio/cad8dmyj97nofycqwzyx.png",
             "projectCategory": "shopify"
         },
         
         {
-            "index": "02",
-            "title": "SmartBrain",
-            "typeOfwork": "Full-Stack",
-            "password": "",
-            "url": "https://mhamad-hmd.github.io/Smart-Brain/",
-            "imgPath": "https://res.cloudinary.com/de8wnrdnn/image/upload/v1675968127/portfolio/l8owi4bp67jqwvf7089x.png",
-            "projectCategory": "full-stack"
-        },
-        {
-            "index": "03",
+            "index": "04",
             "title": "ESHOP",
             "typeOfwork": "Full-Stack",
             "password": "",
@@ -30,23 +39,24 @@
             "projectCategory": "full-stack"
         },
         {
-            "index": "04",
-            "title": "Royal Coats",
-            "typeOfwork": "Front-End x Design",
+            "index": "05",
+            "title": "Shopify Theme",
+            "typeOfwork": "Front-End",
             "password": "12345",
-            "url": "https://royal-coats.myshopify.com/",
-            "imgPath": "https://res.cloudinary.com/de8wnrdnn/image/upload/v1675968130/portfolio/cad8dmyj97nofycqwzyx.png",
+            "url": "https://storefortestapp.myshopify.com/",
+            "imgPath": "https://res.cloudinary.com/de8wnrdnn/image/upload/v1675968127/portfolio/a95ttedlmetpd2dd4yvi.png",
             "projectCategory": "shopify"
         },
         {
-            "index": "05",
-            "title": "MyDay",
-            "typeOfwork": "Front-End x Design",
+            "index": "06",
+            "title": "SmartBrain",
+            "typeOfwork": "Full-Stack",
             "password": "",
-            "url": "https://trustmyday.com/",
-            "imgPath": "https://res.cloudinary.com/de8wnrdnn/image/upload/v1675968130/portfolio/h04zvlyz19m65ddkutuy.png",
-            "projectCategory": "shopify"
-        }
+            "url": "https://mhamad-hmd.github.io/Smart-Brain/",
+            "imgPath": "https://res.cloudinary.com/de8wnrdnn/image/upload/v1675968127/portfolio/l8owi4bp67jqwvf7089x.png",
+            "projectCategory": "full-stack"
+        }        
+        
         
     ]
 }
