@@ -52,8 +52,8 @@ export default function ContactMe({ className, dark }: { className: string, dark
                         </div>
                     </div>
                     <div className='flex my-2'>
-                        <button className='btn px-4 py-2 fontMain  rounded text-xl md:text-2xl m-auto' type='submit'>
-                            <span className={`mainFont font-bold ${dark? "text-dark " : "text-mainColor"}`}>Submit</span>
+                        <button className={`btn px-4 py-2 fontMain  rounded text-xl md:text-2xl m-auto ${dark? "text-dark bg-mainColor " : "text-mainColor bg-scndryColor "}`} type='submit'>
+                            <span className={`mainFont font-bold `}>Submit</span>
                         </button>
                     </div>
                 </form>
